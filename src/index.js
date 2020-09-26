@@ -61,6 +61,39 @@ const findItemsIn = (collection1) => ({
   }),
 });
 
+// drop(3).charactersFrom(str).atTheStart();
+// drop(3).charactersFrom(str).atTheEnd();
+// drop(3).itemsFrom(col).atTheStart();
+// drop(3).itemsFrom(col).atTheEnd();
+// drop(3).itemsFrom(col).thatMatch(); // how to deal with (3) ???
+// drop(3)
+//   .from(col | str)
+//   .atTheEnd();
+// // drop, take, dropIf, takeIf
+// from(col).take(3).fromTheEnd();
+// from(col).take(3).fromTheStart();
+// from(col).takeUntil(pred).fromTheStart();
+// from(col).takeUntil(pred).fromTheEnd();
+// from(col).takeWhile(pred).fromTheEnd();
+const from = (collection) => ({
+  take: (quantity) => ({
+    fromTheStart: () => R.take(quantity, collection),
+    fromTheEnd: () => R.takeLast(quantity, collection),
+  }),
+  takeUntil: (predicate) => ({
+    fromTheStart: () => R.takeWhile(predicate, collection),
+    fromTheEnd: () => R.takeLastWhile(predicate, collection),
+  }),
+  drop: (quantity) => ({
+    fromTheStart: () => R.drop(quantity, collection),
+    fromTheEnd: () => R.dropLast(quantity, collection),
+  }),
+  dropUntil: (predicate) => ({
+    fromTheStart: () => R.dropWhile(predicate, collection),
+    fromTheEnd: () => R.dropLastWhile(predicate, collection),
+  }),
+});
+
 const rpp = {
   adjust,
   split,
@@ -73,6 +106,7 @@ const rpp = {
   concat,
   tally,
   findItemsIn,
+  from,
 };
 
 module.exports = rpp;
