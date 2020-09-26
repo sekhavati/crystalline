@@ -21,6 +21,10 @@ const append = (item) => ({
   to: (collection) => R.append(item, collection),
 });
 
+const concat = (a) => ({
+  with: (b) => R.concat(a, b),
+});
+
 const sort = (collection) => ({
   ascendinglyBy: (prop) => R.sort(R.ascend(R.prop(prop)), collection),
   descendinglyBy: (prop) => R.sort(R.descend(R.prop(prop)), collection),
@@ -39,7 +43,15 @@ const clamp = (number) => ({
   }),
 });
 
-const deepCopy = (objects) => R.clone(objects);
+const deepCopy = (object) => R.clone(object);
+
+// @todo: utilise R.pipe() and R.compose()
+const sequence = () => null;
+const reverseSequence = () => null;
+
+const tally = (collection) => ({
+  by: (predicate) => R.countBy(predicate)(collection),
+});
 
 const rpp = {
   adjust,
@@ -50,6 +62,8 @@ const rpp = {
   within,
   clamp,
   deepCopy,
+  concat,
+  tally,
 };
 
 module.exports = rpp;
