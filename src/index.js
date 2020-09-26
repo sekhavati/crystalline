@@ -53,6 +53,14 @@ const tally = (collection) => ({
   by: (predicate) => R.countBy(predicate)(collection),
 });
 
+// @todo: find syntax whereby differenceWith and symetricDifference can be included fluently
+const findItemsIn = (collection1) => ({
+  notContainedIn: (collection2) => R.difference(collection1, collection2),
+  and: (collection2) => ({
+    thatAreUnique: () => R.symmetricDifference(collection1, collection2),
+  }),
+});
+
 const rpp = {
   adjust,
   split,
@@ -64,6 +72,7 @@ const rpp = {
   deepCopy,
   concat,
   tally,
+  findItemsIn,
 };
 
 module.exports = rpp;
