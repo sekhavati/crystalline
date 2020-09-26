@@ -39,6 +39,8 @@ const clamp = (number) => ({
   }),
 });
 
+const deepCopy = (objects) => R.clone(objects);
+
 const rpp = {
   adjust,
   split,
@@ -47,6 +49,7 @@ const rpp = {
   sort,
   within,
   clamp,
+  deepCopy,
 };
 
 module.exports = rpp;
