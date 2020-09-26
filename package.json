@@ -1,0 +1,10 @@
+{
+  "name": "ramdaplusplus",
+  "version": "0.1.0",
+  "description": "Functional library with a focus on readability",
+  "main": "index.js",
+  "repository": "git@github.com:sekhavati/ramdaplusplus.git",
+  "author": "Amir Sekhavati",
+  "license": "UNLICENSED",
+  "private": true
+}
