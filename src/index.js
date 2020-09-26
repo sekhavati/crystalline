@@ -92,6 +92,13 @@ const from = (collection) => ({
     fromTheStart: () => R.dropWhile(predicate, collection),
     fromTheEnd: () => R.dropLastWhile(predicate, collection),
   }),
+  dropConsecutiveRepeats: () => R.dropRepeats(),
+});
+
+const transform = (obj) => ({
+  byApplying: (predicate) => ({
+    to: (key) => R.evolve({ [key]: predicate }, obj),
+  }),
 });
 
 const rpp = {
@@ -107,6 +114,7 @@ const rpp = {
   tally,
   findItemsIn,
   from,
+  transform,
 };
 
 module.exports = rpp;
