@@ -33,6 +33,12 @@ const within = (obj) => ({
   }),
 });
 
+const clamp = (number) => ({
+  between: (min) => ({
+    and: (max) => R.clamp(number, min, max),
+  }),
+});
+
 const rpp = {
   adjust,
   split,
@@ -40,6 +46,7 @@ const rpp = {
   append,
   sort,
   within,
+  clamp,
 };
 
 module.exports = rpp;
