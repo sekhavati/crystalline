@@ -4,6 +4,7 @@ const adjust = (collection) => ({
   byApplying: (predicate) => ({
     atIndex: (index) => R.adjust(index, predicate, collection),
   }),
+  byInterspersing: (value) => R.intersperse(value, collection),
 });
 
 const split = (collection) => ({
@@ -56,6 +57,7 @@ const tally = (collection) => ({
 // @todo: find syntax whereby differenceWith and symetricDifference can be included fluently
 const findItemsIn = (collection1) => ({
   notContainedIn: (collection2) => R.difference(collection1, collection2),
+  containedIn: (collection2) => R.intersection(collection1, collection2),
   and: (collection2) => ({
     thatAreUnique: () => R.symmetricDifference(collection1, collection2),
   }),
@@ -84,6 +86,8 @@ const from = (collection) => ({
     fromTheStart: () => R.takeWhile(predicate, collection),
     fromTheEnd: () => R.takeLastWhile(predicate, collection),
   }),
+  takeFirst: () => R.head(collection),
+  takeLast: () => R.tail(collection),
   drop: (quantity) => ({
     fromTheStart: () => R.drop(quantity, collection),
     fromTheEnd: () => R.dropLast(quantity, collection),
