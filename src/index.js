@@ -105,6 +105,16 @@ const transform = (obj) => ({
   }),
 });
 
+const merge = (obj1) => ({
+  deeplyWith: (obj2) => ({
+    andResolveConflicts: {
+      viaFirstObject: () => R.mergeDeepLeft(obj1, obj2),
+      viaSecondObject: () => R.mergeDeepRight(obj1, obj2),
+      via: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
+    },
+  }),
+});
+
 const rpp = {
   adjust,
   split,
@@ -119,6 +129,7 @@ const rpp = {
   findItemsIn,
   from,
   transform,
+  merge,
 };
 
 module.exports = rpp;
