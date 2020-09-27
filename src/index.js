@@ -87,7 +87,7 @@ const from = (collection) => ({
     fromTheEnd: () => R.takeLastWhile(predicate, collection),
   }),
   takeFirst: () => R.head(collection),
-  takeLast: () => R.tail(collection),
+  takeLast: () => R.last(collection),
   drop: (quantity) => ({
     fromTheStart: () => R.drop(quantity, collection),
     fromTheEnd: () => R.dropLast(quantity, collection),
