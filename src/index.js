@@ -107,7 +107,7 @@ const transform = (obj) => ({
 
 const merge = (obj1) => ({
   deeplyWith: (obj2) => ({
-    andResolveConflicts: {
+    resolvingConflicts: {
       viaFirstObject: () => R.mergeDeepLeft(obj1, obj2),
       viaSecondObject: () => R.mergeDeepRight(obj1, obj2),
       via: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
