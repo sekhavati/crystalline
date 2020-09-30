@@ -5,6 +5,9 @@ const adjust = (collection) => ({
     atIndex: (index) => R.adjust(index, predicate, collection),
   }),
   byInterspersing: (value) => R.intersperse(value, collection),
+  byMovingItemAtIndex: (fromIndex) => ({
+    to: (toIndex) => R.move(fromIndex, toIndex, collection),
+  }),
 });
 
 const split = (collection) => ({
@@ -105,6 +108,7 @@ const transform = (obj) => ({
   }),
 });
 
+// @todo: rename viaFirstObject => favouringFirstObject() ?
 const merge = (obj1) => ({
   deeplyWith: (obj2) => ({
     resolvingConflicts: {
@@ -113,6 +117,11 @@ const merge = (obj1) => ({
       via: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
     },
   }),
+});
+
+const copy = (obj) => ({
+  excludingKey: (key) => R.omit([key], obj),
+  excludingKeys: (keys) => R.omit(keys, obj),
 });
 
 const rpp = {
@@ -130,6 +139,7 @@ const rpp = {
   from,
   transform,
   merge,
+  copy,
 };
 
 module.exports = rpp;
