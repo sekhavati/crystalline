@@ -13,7 +13,8 @@ const adjust = (collection) => ({
 const split = (collection) => ({
   atIndex: (index) => R.splitAt(index, collection),
   everyNthIndex: (index) => R.splitEvery(index, collection),
-  by: (separator) => R.split(separator, collection),
+  bySeparator: (separator) => R.split(separator, collection),
+  byMatching: (predicate) => R.partition(predicate, collection),
 });
 
 // @todo: consider moving this into 'split.intoChunksOf'
@@ -119,9 +120,14 @@ const merge = (obj1) => ({
   }),
 });
 
+// @todo: think of better opposite mirror names
 const copy = (obj) => ({
   excludingKey: (key) => R.omit([key], obj),
   excludingKeys: (keys) => R.omit(keys, obj),
+  onlyIncludeKey: (key, defaultToUndefined = false) =>
+    defaultToUndefined ? R.pickAll([key], obj) : R.pick([key], obj),
+  onlyIncludeKeys: (keys, defaultToUndefined = false) =>
+    defaultToUndefined ? R.pickAll(keys, obj) : R.pick(keys, obj),
 });
 
 const rpp = {
