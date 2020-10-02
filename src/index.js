@@ -1,5 +1,6 @@
 const R = require("ramda");
 
+// @todo: adjust suggests the original item is modified, but functions are pure. think of better name?
 const adjust = (collection) => ({
   byApplying: (predicate) => ({
     atIndex: (index) => R.adjust(index, predicate, collection),
@@ -7,6 +8,9 @@ const adjust = (collection) => ({
   byInterspersing: (value) => R.intersperse(value, collection),
   byMovingItemAtIndex: (fromIndex) => ({
     to: (toIndex) => R.move(fromIndex, toIndex, collection),
+  }),
+  byRemovingItemsFromIndex: (fromIndex) => ({
+    to: (toIndex) => R.remove(fromIndex, toIndex, collection),
   }),
 });
 
