@@ -34,9 +34,30 @@ const concat = (a) => ({
   with: (b) => R.concat(a, b),
 });
 
+// @todo: ascendinglyBy or ascendinglyByProperty?
 const sort = (collection) => ({
   ascendinglyBy: (prop) => R.sort(R.ascend(R.prop(prop)), collection),
   descendinglyBy: (prop) => R.sort(R.descend(R.prop(prop)), collection),
+  firstAscendinglyBy: (prop1) => ({
+    thenAscendinglyBy: (prop2) =>
+      R.sortWith([R.ascend(R.prop(prop1)), R.ascend(R.prop(prop2))])(
+        collection
+      ),
+    thenDescendinglyBy: (prop2) =>
+      R.sortWith([R.ascend(R.prop(prop1)), R.descend(R.prop(prop2))])(
+        collection
+      ),
+  }),
+  firstDescendinglyBy: (prop1) => ({
+    thenAscendinglyBy: (prop2) =>
+      R.sortWith([R.descend(R.prop(prop1)), R.ascend(R.prop(prop2))])(
+        collection
+      ),
+    thenDescendinglyBy: (prop2) =>
+      R.sortWith([R.descend(R.prop(prop1)), R.descend(R.prop(prop2))])(
+        collection
+      ),
+  }),
 });
 
 const within = (obj) => ({
