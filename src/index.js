@@ -16,9 +16,10 @@ const adjust = (collection) => ({
 
 const split = (collection) => ({
   atIndex: (index) => R.splitAt(index, collection),
+  atFirstEncounterOf: (predicate) => R.splitWhen(predicate),
   everyNthIndex: (index) => R.splitEvery(index, collection),
   bySeparator: (separator) => R.split(separator, collection),
-  byMatching: (predicate) => R.partition(predicate, collection),
+  byItemsMatching: (predicate) => R.partition(predicate, collection),
 });
 
 // @todo: consider moving this into 'split.intoChunksOf'
