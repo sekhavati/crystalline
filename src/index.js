@@ -5,13 +5,14 @@ const adjust = (collection) => ({
   byApplying: (predicate) => ({
     atIndex: (index) => R.adjust(index, predicate, collection),
   }),
-  byInterspersing: (value) => R.intersperse(value, collection),
+  byInsertingBetweenEachItem: (value) => R.intersperse(value, collection),
   byMovingItemAtIndex: (fromIndex) => ({
     to: (toIndex) => R.move(fromIndex, toIndex, collection),
   }),
   byRemovingItemsFromIndex: (fromIndex) => ({
     to: (toIndex) => R.remove(fromIndex, toIndex, collection),
   }),
+  byRemovingDuplicates: () => R.uniq(collection),
 });
 
 const split = (collection) => ({
@@ -85,6 +86,7 @@ const tally = (collection) => ({
 });
 
 // @todo: find syntax whereby differenceWith and symetricDifference can be included fluently
+// @todo: R.union() is similar. could this be changed to combine(col1).with(col2).uniquely()?
 const findItemsIn = (collection1) => ({
   notContainedIn: (collection2) => R.difference(collection1, collection2),
   containedIn: (collection2) => R.intersection(collection1, collection2),
