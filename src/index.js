@@ -63,8 +63,8 @@ const sort = (collection) => ({
 
 const within = (obj) => ({
   set: (key) => ({ to: (value) => R.assoc(key, value, obj) }),
-  setPath: (key, pathSeparator = ".") => ({
-    to: (value) => R.assocPath(key.split(pathSeparator), value, obj),
+  setPath: (key, keyPathSeparator = ".") => ({
+    to: (value) => R.assocPath(key.split(keyPathSeparator), value, obj),
   }),
 });
 
