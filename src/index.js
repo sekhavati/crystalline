@@ -13,6 +13,8 @@ const adjust = (collection) => ({
     to: (toIndex) => R.remove(fromIndex, toIndex, collection),
   }),
   byRemovingDuplicates: () => R.uniq(collection),
+  byRemovingItemsEqualTo: (itemsToRemove) =>
+    R.without(itemsToRemove, collection),
 });
 
 const split = (collection) => ({
