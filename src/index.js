@@ -1,20 +1,21 @@
 const R = require("ramda");
 
-// @todo: adjust suggests the original item is modified, but functions are pure. think of better name?
-const adjust = (collection) => ({
-  byApplying: (predicate) => ({
+// alter object, alter collection, alter string
+const alter = (collection) => ({
+  byApplyingFn: (predicate) => ({
     atIndex: (index) => R.adjust(index, predicate, collection),
   }),
   byInsertingBetweenEachItem: (value) => R.intersperse(value, collection),
   byMovingItemAtIndex: (fromIndex) => ({
     to: (toIndex) => R.move(fromIndex, toIndex, collection),
   }),
-  byRemovingItemsFromIndex: (fromIndex) => ({
-    to: (toIndex) => R.remove(fromIndex, toIndex, collection),
+  byRemovingItemsBetweenIndex: (fromIndex) => ({
+    and: (toIndex) => R.remove(fromIndex, toIndex, collection),
   }),
   byRemovingDuplicates: () => R.uniq(collection),
-  byRemovingItemsEqualTo: (itemsToRemove) =>
+  byRemovingItemsContainedIn: (itemsToRemove) =>
     R.without(itemsToRemove, collection),
+  // @todo: byTrimmingLengthTo
 });
 
 const split = (collection) => ({
@@ -23,22 +24,12 @@ const split = (collection) => ({
   everyNthIndex: (index) => R.splitEvery(index, collection),
   bySeparator: (separator) => R.split(separator, collection),
   byItemsMatching: (predicate) => R.partition(predicate, collection),
+
+  // @todo: should we include the function below? could cause confusion with everyNthIndex, better name or leave out? consecutive?
+  // intoGroupsOfSize: (groupSize) => R.aperture(groupSize, collection),
 });
 
-// @todo: consider moving this into 'split.intoChunksOf'
-const chunk = (collection) => ({
-  intoGroupsOf: (groupSize) => R.aperture(groupSize, collection),
-});
-
-const append = (item) => ({
-  to: (collection) => R.append(item, collection),
-});
-
-const concat = (a) => ({
-  with: (b) => R.concat(a, b),
-});
-
-// @todo: ascendinglyBy or ascendinglyByProperty?
+// @todo: ascendinglyBy or ascendinglyByProperty or ascByProperty?
 const sort = (collection) => ({
   ascendinglyBy: (prop) => R.sort(R.ascend(R.prop(prop)), collection),
   descendinglyBy: (prop) => R.sort(R.descend(R.prop(prop)), collection),
@@ -65,23 +56,17 @@ const sort = (collection) => ({
 });
 
 const within = (obj) => ({
-  set: (key) => ({ to: (value) => R.assoc(key, value, obj) }),
   setPath: (key, keyPathSeparator = ".") => ({
     to: (value) => R.assocPath(key.split(keyPathSeparator), value, obj),
   }),
 });
 
+// @todo: perhaps remove this function, its useful but an odd one out
 const clamp = (number) => ({
   between: (min) => ({
     and: (max) => R.clamp(number, min, max),
   }),
 });
-
-const deepCopy = (object) => R.clone(object);
-
-// @todo: utilise R.pipe() and R.compose()
-const sequence = () => null;
-const reverseSequence = () => null;
 
 const tally = (collection) => ({
   by: (predicate) => R.countBy(predicate)(collection),
@@ -111,6 +96,9 @@ const findItemsIn = (collection1) => ({
 // from(col).takeUntil(pred).fromTheStart();
 // from(col).takeUntil(pred).fromTheEnd();
 // from(col).takeWhile(pred).fromTheEnd();
+// from(col).take(3).itemsFromTheStart();
+// from(str).take(3).charsFromTheStart();
+// from(col).take(3).fromTheStart();
 const from = (collection) => ({
   take: (quantity) => ({
     fromTheStart: () => R.take(quantity, collection),
@@ -134,7 +122,7 @@ const from = (collection) => ({
 });
 
 // @todo: add multi-transformation function, eg: tranform(obj).byTransforming(keys).with(transformers)
-const transform = (obj) => ({
+const change = (obj) => ({
   byApplying: (transformer) => ({
     to: (key) => R.evolve({ [key]: transformer }, obj),
   }),
@@ -146,18 +134,18 @@ const merge = (obj1) => ({
     resolvingConflicts: {
       viaFirstObject: () => R.mergeDeepLeft(obj1, obj2),
       viaSecondObject: () => R.mergeDeepRight(obj1, obj2),
-      via: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
+      viaFunction: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
     },
   }),
 });
 
-// @todo: think of better opposite mirror names
 const copy = (obj) => ({
-  excludingKey: (key) => R.omit([key], obj),
-  excludingKeys: (keys) => R.omit(keys, obj),
-  onlyIncludeKey: (key, defaultToUndefined = false) =>
+  deeply: () => R.clone(obj);
+  discardKey: (key) => R.omit([key], obj),
+  discardKeys: (keys) => R.omit(keys, obj),
+  keepKey: (key, defaultToUndefined = false) =>
     defaultToUndefined ? R.pickAll([key], obj) : R.pick([key], obj),
-  onlyIncludeKeys: (keys, defaultToUndefined = false) =>
+  keepKeys: (keys, defaultToUndefined = false) =>
     defaultToUndefined ? R.pickAll(keys, obj) : R.pick(keys, obj),
 });
 
@@ -177,22 +165,23 @@ const sequence = (sequenceRule) => ({
 });
 
 const rpp = {
-  adjust,
+  // arrays
+  alter,
   split,
-  chunk,
-  append,
   sort,
-  within,
-  clamp,
-  deepCopy,
-  concat,
   tally,
   findItemsIn,
   from,
-  transform,
+  sequence,
+
+  // objects
+  within,
+  change,
   merge,
   copy,
-  sequence,
+
+  // numbers
+  clamp,
 };
 
 module.exports = rpp;
