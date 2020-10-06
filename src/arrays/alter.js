@@ -6,13 +6,13 @@ const alter = (arr) => ({
   }),
   byInsertingBetweenEachItem: (value) => R.intersperse(value, arr),
   byMovingItemAtIndex: (fromIndex) => ({
-    to: (toIndex) => R.move(fromIndex, toIndex, arr),
+    toIndex: (toIndex) => R.move(fromIndex, toIndex, arr),
   }),
   byRemovingItemsBetweenIndex: (fromIndex) => ({
-    and: (toIndex) => R.remove(fromIndex, toIndex, arr),
+    andIndex: (toIndex) => R.remove(fromIndex, toIndex, arr),
   }),
   byRemovingDuplicates: () => R.uniq(arr),
-  byRemovingItemsContainedIn: (itemsToRemove) => R.without(itemsToRemove, arr),
+  byRemovingItems: (itemsToRemove) => R.without(itemsToRemove, arr),
 
   // @todo: introduce byTrimmingLengthTo
 });
