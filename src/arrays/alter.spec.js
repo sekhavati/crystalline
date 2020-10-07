@@ -9,8 +9,8 @@ describe("alter", () => {
 
         const result = alter(input).byApplyingFn(R.toUpper).atIndex(1);
 
-        expect(input).not.toEqual(result);
         expect(result).toEqual(["a", "B", "c", "d"]);
+        expect(input).not.toEqual(result);
       });
     });
   });
@@ -21,8 +21,8 @@ describe("alter", () => {
 
       const result = alter(input).byInsertingBetweenEachItem("a");
 
-      expect(input).not.toEqual(result);
       expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
+      expect(input).not.toEqual(result);
     });
   });
 
@@ -33,8 +33,8 @@ describe("alter", () => {
 
         const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
 
-        expect(input).not.toEqual(result);
         expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
+        expect(input).not.toEqual(result);
       });
     });
   });
@@ -46,8 +46,8 @@ describe("alter", () => {
 
         const result = alter(input).byRemovingItemsBetweenIndex(2).andIndex(3);
 
-        expect(input).not.toEqual(result);
         expect(result).toEqual([1, 2, 6, 7, 8]);
+        expect(input).not.toEqual(result);
       });
     });
   });
@@ -62,13 +62,13 @@ describe("alter", () => {
       const result2 = alter(input2).byRemovingDuplicates();
       const result3 = alter(input3).byRemovingDuplicates();
 
-      expect(input1).not.toEqual(result1);
       expect(result1).toEqual([1, 2]);
+      expect(input1).not.toEqual(result1);
 
       expect(result2).toEqual([1, "1"]);
 
-      expect(input3).not.toEqual(result3);
       expect(result3).toEqual([[42]]);
+      expect(input3).not.toEqual(result3);
     });
   });
 
