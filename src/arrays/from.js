@@ -17,6 +17,9 @@ const R = require("ramda");
 // from(col).take(3).itemsFromTheStart();
 // from(str).take(3).charsFromTheStart();
 // from(col).take(3).fromTheStart();
+// take(5).from(
+// @todo: consider splitting out take/drop
+// @todo: prefix function names with "items", ie: itemsFromTheStart
 const from = (arr) => ({
   take: (quantity) => ({
     fromTheStart: () => R.take(quantity, arr),
@@ -36,7 +39,7 @@ const from = (arr) => ({
     fromTheStart: () => R.dropWhile(predicate, arr),
     fromTheEnd: () => R.dropLastWhile(predicate, arr),
   }),
-  dropConsecutiveRepeats: () => R.dropRepeats(),
+  dropConsecutiveRepeats: () => R.dropRepeats(arr),
 });
 
 module.exports = { from };
