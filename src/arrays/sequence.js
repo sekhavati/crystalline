@@ -11,7 +11,7 @@ const sequence = (sequenceRule) => ({
       const f = (n) => (sequenceTerminator(n) ? false : [n, sequenceRule(n)]);
       return R.unfold(f, seed);
     },
-    untilLength: (length) => null, // @todo: create a sequence with max length entries
+    // untilLength: (length) => null, // @todo: create a sequence with max length entries
   }),
 });
 
