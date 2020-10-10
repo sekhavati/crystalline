@@ -1,6 +1,7 @@
 const R = require("ramda");
 
 // @todo: ascendinglyBy or ascendinglyByProperty or ascByProperty?
+// @todo: rename ascendinlyBy to ascendingBy
 const sort = (arr) => ({
   ascendinglyBy: (prop) => R.sort(R.ascend(R.prop(prop)), arr),
   descendinglyBy: (prop) => R.sort(R.descend(R.prop(prop)), arr),
