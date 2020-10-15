@@ -15,6 +15,7 @@
     "prettier": "2.1.2"
   },
   "scripts": {
+    "build": "echo 'todo - write build script",
     "test": "jest"
   }
 }
