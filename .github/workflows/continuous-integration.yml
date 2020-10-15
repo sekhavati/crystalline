@@ -1,0 +1,53 @@
+name: continuous-integration
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["12.x"]
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Print version information
+        run: yarn versions
+
+      - name: Install application dependencies
+        run: yarn install
+
+      - name: Build application
+        run: yarn build
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      matrix:
+        node-version: ["12.x"]
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v1
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Print version information
+        run: yarn versions
+
+      - name: Install application dependencies
+        run: yarn install
+
+      - name: Run application tests
+        run: yarn test
