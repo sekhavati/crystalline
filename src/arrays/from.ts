@@ -30,8 +30,14 @@ import last from "ramda/src/last";
 // take(5).from(
 // @todo: consider splitting out take/drop
 // @todo: prefix function names with "items", ie: itemsFromTheStart
+
+// from(arr).takeQuantity(4).fromTheFront()
+// from(arr).takeQuantity(4).fromTheBeginning()
+// from(arr).takeUntil(n => n != 4).itemsFromTheStart
+// from(arr).takeUntil(n => n != 4).fromTheStart()
+
 const from = (arr) => ({
-  take: (quantity) => ({
+  takeQuantity: (quantity) => ({
     fromTheStart: () => take(quantity, arr),
     fromTheEnd: () => takeLast(quantity, arr),
   }),
