@@ -18,8 +18,6 @@ const alter = (arr) => ({
   }),
   byRemovingDuplicates: () => uniq(arr),
   byRemovingItems: (itemsToRemove) => without(itemsToRemove, arr),
-
-  // @todo: introduce byTrimmingLengthTo
 });
 
 export { alter };
