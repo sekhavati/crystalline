@@ -1,9 +1,9 @@
-const R = require("ramda");
+import rClamp from "ramda/src/clamp";
 
 const clamp = (num) => ({
   between: (min) => ({
-    and: (max) => R.clamp(min, max, num),
+    and: (max) => rClamp(min, max, num),
   }),
 });
 
-module.exports = { clamp };
+export { clamp };

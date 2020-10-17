@@ -1,11 +1,6 @@
-const { alter } = require("./alter");
-const { copy } = require("./copy");
-const { merge } = require("./merge");
-const { within } = require("./within");
+import { alter } from "./alter";
+import { copy } from "./copy";
+import { merge } from "./merge";
+import { within } from "./within";
 
-module.exports = {
-  alter,
-  copy,
-  merge,
-  within,
-};
+export default { alter, copy, merge, within };

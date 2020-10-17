@@ -1,11 +1,9 @@
-const arrays = require("./arrays");
-const numbers = require("./numbers");
-const objects = require("./objects");
+import arrays from "./arrays";
+import numbers from "./numbers";
+import objects from "./objects";
 
-const rpp = {
+export default {
   arrays,
   numbers,
   objects,
 };
-
-module.exports = rpp;

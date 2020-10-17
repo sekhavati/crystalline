@@ -1,5 +1,4 @@
-const R = require("ramda");
-const { alter } = require("./alter");
+import { alter } from "./alter";
 
 describe("alter", () => {
   describe("byApplyingFn", () => {
@@ -7,7 +6,9 @@ describe("alter", () => {
       it("should return a new array with the function supplied at the given index", () => {
         const input = ["a", "b", "c", "d"];
 
-        const result = alter(input).byApplyingFn(R.toUpper).atIndex(1);
+        const result = alter(input)
+          .byApplyingFn((n) => n.toUpperCase())
+          .atIndex(1);
 
         expect(result).toEqual(["a", "B", "c", "d"]);
         expect(input).not.toEqual(result);

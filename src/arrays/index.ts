@@ -1,17 +1,9 @@
-const { alter } = require("./alter");
-const { findItemsIn } = require("./find-items-in");
-const { from } = require("./from");
-const { sequence } = require("./sequence");
-const { sort } = require("./sort");
-const { split } = require("./split");
-const { tally } = require("./tally");
+import { alter } from "./alter";
+import { findItemsIn } from "./find-items-in";
+import { from } from "./from";
+import { sequence } from "./sequence";
+import { sort } from "./sort";
+import { split } from "./split";
+import { tally } from "./tally";
 
-module.exports = {
-  alter,
-  findItemsIn,
-  from,
-  sequence,
-  sort,
-  split,
-  tally,
-};
+export default { alter, findItemsIn, from, sequence, sort, split, tally };

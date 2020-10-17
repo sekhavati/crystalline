@@ -1,4 +1,4 @@
-const { copy } = require("./copy");
+import { copy } from "./copy";
 
 describe("copy", () => {
   describe("deeply", () => {

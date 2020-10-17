@@ -1,5 +1,3 @@
-const { clamp } = require("./clamp");
+import { clamp } from "./clamp";
 
-module.exports = {
-  clamp,
-};
+export default { clamp };

@@ -1,4 +1,14 @@
-const R = require("ramda");
+import take from "ramda/src/take";
+import takeLast from "ramda/src/takeLast";
+import takeWhile from "ramda/src/takeWhile";
+import takeLastWhile from "ramda/src/takeLastWhile";
+import head from "ramda/src/head";
+import drop from "ramda/src/drop";
+import dropLast from "ramda/src/dropLast";
+import dropWhile from "ramda/src/dropWhile";
+import dropLastWhile from "ramda/src/dropLastWhile";
+import dropRepeats from "ramda/src/dropRepeats";
+import last from "ramda/src/last";
 
 // drop(3).charactersFrom(str).atTheStart();
 // drop(3).charactersFrom(str).atTheEnd();
@@ -22,24 +32,24 @@ const R = require("ramda");
 // @todo: prefix function names with "items", ie: itemsFromTheStart
 const from = (arr) => ({
   take: (quantity) => ({
-    fromTheStart: () => R.take(quantity, arr),
-    fromTheEnd: () => R.takeLast(quantity, arr),
+    fromTheStart: () => take(quantity, arr),
+    fromTheEnd: () => takeLast(quantity, arr),
   }),
   takeUntil: (predicate) => ({
-    fromTheStart: () => R.takeWhile(predicate, arr),
-    fromTheEnd: () => R.takeLastWhile(predicate, arr),
+    fromTheStart: () => takeWhile(predicate, arr),
+    fromTheEnd: () => takeLastWhile(predicate, arr),
   }),
-  takeFirst: () => R.head(arr),
-  takeLast: () => R.last(arr),
+  takeFirst: () => head(arr),
+  takeLast: () => last(arr),
   drop: (quantity) => ({
-    fromTheStart: () => R.drop(quantity, arr),
-    fromTheEnd: () => R.dropLast(quantity, arr),
+    fromTheStart: () => drop(quantity, arr),
+    fromTheEnd: () => dropLast(quantity, arr),
   }),
   dropUntil: (predicate) => ({
-    fromTheStart: () => R.dropWhile(predicate, arr),
-    fromTheEnd: () => R.dropLastWhile(predicate, arr),
+    fromTheStart: () => dropWhile(predicate, arr),
+    fromTheEnd: () => dropLastWhile(predicate, arr),
   }),
-  dropConsecutiveRepeats: () => R.dropRepeats(arr),
+  dropConsecutiveRepeats: () => dropRepeats(arr),
 });
 
-module.exports = { from };
+export { from };

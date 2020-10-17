@@ -1,4 +1,4 @@
-const { split } = require("./split");
+import { split } from "./split";
 
 describe("split", () => {
   describe("atIndex", () => {

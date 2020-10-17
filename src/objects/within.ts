@@ -1,10 +1,10 @@
-const R = require("ramda");
+import assocPath from "ramda/src/assocPath";
 
 // @todo: reconsider if its worth keeping this function
 const within = (obj) => ({
   setPath: (key, keyPathSeparator = ".") => ({
-    to: (value) => R.assocPath(key.split(keyPathSeparator), value, obj),
+    to: (value) => assocPath(key.split(keyPathSeparator), value, obj),
   }),
 });
 
-module.exports = { within };
+export { within };

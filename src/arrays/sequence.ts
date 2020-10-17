@@ -1,4 +1,4 @@
-const R = require("ramda");
+import unfold from "ramda/src/unfold";
 
 // seedValue: 10;
 // sequenceTerminator: (n) => n < 50;
@@ -9,10 +9,10 @@ const sequence = (sequenceRule) => ({
   startingWith: (seed) => ({
     untilCondition: (sequenceTerminator) => {
       const f = (n) => (sequenceTerminator(n) ? false : [n, sequenceRule(n)]);
-      return R.unfold(f, seed);
+      return unfold(f, seed);
     },
     // untilLength: (length) => null, // @todo: create a sequence with max length entries
   }),
 });
 
-module.exports = { sequence };
+export { sequence };

@@ -1,14 +1,16 @@
-const R = require("ramda");
+import mergeDeepLeft from "ramda/src/mergeDeepLeft";
+import mergeDeepRight from "ramda/src/mergeDeepRight";
+import mergeDeepWith from "ramda/src/mergeDeepWith";
 
 // @todo: rename viaFirstObject => favouringFirstObject() ?
 const merge = (obj1) => ({
   deeplyWith: (obj2) => ({
     resolvingConflicts: {
-      viaFirstObject: () => R.mergeDeepLeft(obj1, obj2),
-      viaSecondObject: () => R.mergeDeepRight(obj1, obj2),
-      viaFunction: (predicate) => R.mergeDeepWith(predicate, obj1, obj2),
+      viaFirstObject: () => mergeDeepLeft(obj1, obj2),
+      viaSecondObject: () => mergeDeepRight(obj1, obj2),
+      viaFunction: (predicate) => mergeDeepWith(predicate, obj1, obj2),
     },
   }),
 });
 
-module.exports = { merge };
+export { merge };

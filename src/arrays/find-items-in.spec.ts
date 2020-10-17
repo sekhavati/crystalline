@@ -1,4 +1,4 @@
-const { findItemsIn } = require("./find-items-in");
+import { findItemsIn } from "./find-items-in";
 
 describe("findItemsIn", () => {
   describe("notContainedIn", () => {

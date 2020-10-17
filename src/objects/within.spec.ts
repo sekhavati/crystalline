@@ -1,4 +1,4 @@
-const { within } = require("./within");
+import { within } from "./within";
 
 describe("within", () => {
   describe("setPath", () => {

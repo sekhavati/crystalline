@@ -1,4 +1,4 @@
-const { from } = require("./from");
+import { from } from "./from";
 
 describe("from", () => {
   describe("take", () => {

@@ -1,4 +1,4 @@
-const { tally } = require("./tally");
+import { tally } from "./tally";
 
 describe("tally", () => {
   describe("by", () => {

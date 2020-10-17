@@ -1,4 +1,4 @@
-const { alter } = require("./alter");
+import { alter } from "./alter";
 
 describe("alter", () => {
   describe("byApplying", () => {

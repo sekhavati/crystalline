@@ -1,7 +1,7 @@
-const R = require("ramda");
+import countBy from "ramda/src/countBy";
 
 const tally = (arr) => ({
-  by: (predicate) => R.countBy(predicate)(arr),
+  by: (predicate) => countBy(predicate)(arr),
 });
 
-module.exports = { tally };
+export { tally };

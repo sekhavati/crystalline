@@ -1,4 +1,4 @@
-const { clamp } = require("./clamp");
+import { clamp } from "./clamp";
 
 describe("clamp", () => {
   describe("between", () => {
