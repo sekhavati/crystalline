@@ -1,6 +1,6 @@
-import { sequence } from "./sequence";
+import { sequenceFrom } from "./sequence-from";
 
-describe("sequence", () => {
+describe("sequenceFrom", () => {
   describe("startingWith", () => {
     describe("untilCondition", () => {
       it("should generate an array of items using the rule and seed value up until the terminator condition is met", () => {
@@ -8,7 +8,7 @@ describe("sequence", () => {
         const terminator = (n) => n > 1e10;
         const seed = 10;
 
-        const result = sequence(rule)
+        const result = sequenceFrom(rule)
           .startingWith(seed)
           .untilCondition(terminator);
 
