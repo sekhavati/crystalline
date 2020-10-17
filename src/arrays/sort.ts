@@ -5,18 +5,18 @@ import sortWith from "ramda/src/sortWith";
 import rProp from "ramda/src/prop";
 
 const sort = (arr) => ({
-  ascendingBy: (prop) => rSort(ascend(rProp(prop)), arr),
-  descendingBy: (prop) => rSort(descend(rProp(prop)), arr),
-  firstAscendingBy: (prop1) => ({
-    thenAscendingBy: (prop2) =>
+  ascendingByProperty: (prop) => rSort(ascend(rProp(prop)), arr),
+  descendingByProperty: (prop) => rSort(descend(rProp(prop)), arr),
+  firstAscendingByProperty: (prop1) => ({
+    thenAscendingByProperty: (prop2) =>
       sortWith([ascend(rProp(prop1)), ascend(rProp(prop2))])(arr),
-    thenDescendingBy: (prop2) =>
+    thenDescendingByProperty: (prop2) =>
       sortWith([ascend(rProp(prop1)), descend(rProp(prop2))])(arr),
   }),
-  firstDescendingBy: (prop1) => ({
-    thenAscendingBy: (prop2) =>
+  firstDescendingByProperty: (prop1) => ({
+    thenAscendingByProperty: (prop2) =>
       sortWith([descend(rProp(prop1)), ascend(rProp(prop2))])(arr),
-    thenDescendingBy: (prop2) =>
+    thenDescendingByProperty: (prop2) =>
       sortWith([descend(rProp(prop1)), descend(rProp(prop2))])(arr),
   }),
 });
