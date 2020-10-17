@@ -1,7 +1,7 @@
 import { sort } from "./sort";
 
 describe("sort", () => {
-  describe("ascendinglyBy", () => {
+  describe("ascendingBy", () => {
     it("should return a new array with items from the source array sorted in ascending order by a given property", () => {
       const input = [
         { name: "Emma", age: 70 },
@@ -9,7 +9,7 @@ describe("sort", () => {
         { name: "Mikhail", age: 62 },
       ];
 
-      const result = sort(input).ascendinglyBy("age");
+      const result = sort(input).ascendingBy("age");
 
       expect(result).toEqual([
         { name: "Mikhail", age: 62 },
@@ -20,7 +20,7 @@ describe("sort", () => {
     });
   });
 
-  describe("descendinglyBy", () => {
+  describe("descendingBy", () => {
     it("should return a new array with items from the source array sorted in descending order by a given property", () => {
       const input = [
         { name: "Emma", age: 70 },
@@ -28,7 +28,7 @@ describe("sort", () => {
         { name: "Mikhail", age: 62 },
       ];
 
-      const result = sort(input).descendinglyBy("age");
+      const result = sort(input).descendingBy("age");
 
       expect(result).toEqual([
         { name: "Peter", age: 78 },
@@ -39,8 +39,8 @@ describe("sort", () => {
     });
   });
 
-  describe("firstAscendinglyBy", () => {
-    describe("thenAscendinglyBy", () => {
+  describe("firstAscendingBy", () => {
+    describe("thenAscendingBy", () => {
       it("should return a new array with items from the source array sorted in ascending order by the first property, then ascending by the second property", () => {
         const alice = {
           name: "alice",
@@ -57,15 +57,15 @@ describe("sort", () => {
         const input = [clara, bob, alice];
 
         const result = sort(input)
-          .firstAscendinglyBy("age")
-          .thenAscendinglyBy("name");
+          .firstAscendingBy("age")
+          .thenAscendingBy("name");
 
         expect(result).toEqual([bob, alice, clara]);
         expect(input !== result).toBe(true);
       });
     });
 
-    describe("thenDescendinglyBy", () => {
+    describe("thenDescendingBy", () => {
       it("should return a new array with items from the source array sorted in ascending order by the first property, then descending by the second property", () => {
         const alice = {
           name: "alice",
@@ -82,8 +82,8 @@ describe("sort", () => {
         const input = [clara, bob, alice];
 
         const result = sort(input)
-          .firstAscendinglyBy("age")
-          .thenDescendinglyBy("name");
+          .firstAscendingBy("age")
+          .thenDescendingBy("name");
 
         expect(result).toEqual([bob, clara, alice]);
         expect(input !== result).toBe(true);
@@ -91,8 +91,8 @@ describe("sort", () => {
     });
   });
 
-  describe("firstDescendinglyBy", () => {
-    describe("thenAscendinglyBy", () => {
+  describe("firstDescendingBy", () => {
+    describe("thenAscendingBy", () => {
       it("should return a new array with items from the source array sorted in descending order by the first property, then ascending by the second property", () => {
         const alice = {
           name: "alice",
@@ -109,15 +109,15 @@ describe("sort", () => {
         const input = [clara, bob, alice];
 
         const result = sort(input)
-          .firstDescendinglyBy("age")
-          .thenAscendinglyBy("name");
+          .firstDescendingBy("age")
+          .thenAscendingBy("name");
 
         expect(result).toEqual([alice, clara, bob]);
         expect(input !== result).toBe(true);
       });
     });
 
-    describe("thenDescendinglyBy", () => {
+    describe("thenDescendingBy", () => {
       it("should return a new array with items from the source array sorted in descending order by the first property, then descending by the second property", () => {
         const alice = {
           name: "alice",
@@ -134,8 +134,8 @@ describe("sort", () => {
         const input = [clara, bob, alice];
 
         const result = sort(input)
-          .firstDescendinglyBy("age")
-          .thenDescendinglyBy("name");
+          .firstDescendingBy("age")
+          .thenDescendingBy("name");
 
         expect(result).toEqual([clara, alice, bob]);
         expect(input !== result).toBe(true);
