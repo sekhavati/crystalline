@@ -11,16 +11,16 @@ import dropRepeats from "ramda/src/dropRepeats";
 import last from "ramda/src/last";
 
 const from = (arr) => ({
-  takeQuantity: (quantity) => ({
+  pickQuantity: (quantity) => ({
     fromTheStart: () => take(quantity, arr),
     fromTheEnd: () => takeLast(quantity, arr),
   }),
-  takeWhile: (predicate) => ({
+  pickWhile: (predicate) => ({
     fromTheStart: () => takeWhile(predicate, arr),
     fromTheEnd: () => takeLastWhile(predicate, arr),
   }),
-  takeFirst: () => head(arr),
-  takeLast: () => last(arr),
+  pickFirst: () => head(arr),
+  pickLast: () => last(arr),
   dropFirst: () => from(arr).dropQuantity(1).fromTheStart(),
   dropLast: () => from(arr).dropQuantity(1).fromTheEnd(),
   dropQuantity: (quantity) => ({

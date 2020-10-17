@@ -1,16 +1,16 @@
 import { from } from "./from";
 
 describe("from", () => {
-  describe("takeQuantity", () => {
+  describe("pickQuantity", () => {
     describe("fromTheStart", () => {
       it("should return a new array containing the first N number of items from the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result1 = from(input).takeQuantity(1).fromTheStart();
+        const result1 = from(input).pickQuantity(1).fromTheStart();
         expect(result1).toEqual(["foo"]);
         expect(input !== result1).toBe(true);
 
-        const result2 = from(input).takeQuantity(2).fromTheStart();
+        const result2 = from(input).pickQuantity(2).fromTheStart();
         expect(result2).toEqual(["foo", "bar"]);
         expect(input !== result2).toBe(true);
       });
@@ -18,7 +18,7 @@ describe("from", () => {
       it("should return all items if the quantity requested is greater than the length of the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result = from(input).takeQuantity(5).fromTheStart();
+        const result = from(input).pickQuantity(5).fromTheStart();
 
         expect(result).toEqual(["foo", "bar", "baz"]);
         expect(input !== result).toBe(true);
@@ -29,11 +29,11 @@ describe("from", () => {
       it("should return a new array containing the last N number of items from the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result1 = from(input).takeQuantity(1).fromTheEnd();
+        const result1 = from(input).pickQuantity(1).fromTheEnd();
         expect(result1).toEqual(["baz"]);
         expect(input !== result1).toBe(true);
 
-        const result2 = from(input).takeQuantity(2).fromTheEnd();
+        const result2 = from(input).pickQuantity(2).fromTheEnd();
         expect(result2).toEqual(["bar", "baz"]);
         expect(input !== result2).toBe(true);
       });
@@ -41,7 +41,7 @@ describe("from", () => {
       it("should return all items if the quantity requested is greater than the length of the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result = from(input).takeQuantity(5).fromTheEnd();
+        const result = from(input).pickQuantity(5).fromTheEnd();
 
         expect(result).toEqual(["foo", "bar", "baz"]);
         expect(input !== result).toBe(true);
@@ -49,13 +49,13 @@ describe("from", () => {
     });
   });
 
-  describe("takeWhile", () => {
+  describe("pickWhile", () => {
     describe("fromTheStart", () => {
       it("should return a new array containing items from the start of the source array until when the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .takeWhile((n) => n !== 4)
+          .pickWhile((n) => n !== 4)
           .fromTheStart();
 
         expect(result).toEqual([1, 2, 3]);
@@ -68,7 +68,7 @@ describe("from", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .takeWhile((n) => n !== 4)
+          .pickWhile((n) => n !== 4)
           .fromTheEnd();
 
         expect(result).toEqual([3, 2, 1]);
@@ -77,16 +77,16 @@ describe("from", () => {
     });
   });
 
-  describe("takeFirst", () => {
+  describe("pickFirst", () => {
     it("should return the first item from the source array ", () => {
-      const result = from(["fi", "fo", "fum"]).takeFirst();
+      const result = from(["fi", "fo", "fum"]).pickFirst();
       expect(result).toBe("fi");
     });
   });
 
-  describe("takeLast", () => {
+  describe("pickLast", () => {
     it("should return the last item from the source array ", () => {
-      const result = from(["fi", "fo", "fum"]).takeLast();
+      const result = from(["fi", "fo", "fum"]).pickLast();
       expect(result).toBe("fum");
     });
   });
