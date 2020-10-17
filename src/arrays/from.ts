@@ -41,7 +41,7 @@ const from = (arr) => ({
     fromTheStart: () => take(quantity, arr),
     fromTheEnd: () => takeLast(quantity, arr),
   }),
-  takeUntil: (predicate) => ({
+  takeWhile: (predicate) => ({
     fromTheStart: () => takeWhile(predicate, arr),
     fromTheEnd: () => takeLastWhile(predicate, arr),
   }),
@@ -51,7 +51,7 @@ const from = (arr) => ({
     fromTheStart: () => drop(quantity, arr),
     fromTheEnd: () => dropLast(quantity, arr),
   }),
-  dropUntil: (predicate) => ({
+  dropWhile: (predicate) => ({
     fromTheStart: () => dropWhile(predicate, arr),
     fromTheEnd: () => dropLastWhile(predicate, arr),
   }),

@@ -49,13 +49,13 @@ describe("from", () => {
     });
   });
 
-  describe("takeUntil", () => {
+  describe("takeWhile", () => {
     describe("fromTheStart", () => {
       it("should return a new array containing items from the start of the source array until when the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .takeUntil((n) => n !== 4)
+          .takeWhile((n) => n !== 4)
           .fromTheStart();
 
         expect(result).toEqual([1, 2, 3]);
@@ -68,7 +68,7 @@ describe("from", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .takeUntil((n) => n !== 4)
+          .takeWhile((n) => n !== 4)
           .fromTheEnd();
 
         expect(result).toEqual([3, 2, 1]);
@@ -139,13 +139,13 @@ describe("from", () => {
     });
   });
 
-  describe("dropUntil", () => {
+  describe("dropWhile", () => {
     describe("fromTheStart", () => {
       it("should return a new array containing items from the head of the source array after the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .dropUntil((n) => n <= 2)
+          .dropWhile((n) => n <= 2)
           .fromTheStart();
 
         expect(result).toEqual([3, 4, 3, 2, 1]);
@@ -156,7 +156,7 @@ describe("from", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
-          .dropUntil((n) => n <= 3)
+          .dropWhile((n) => n <= 3)
           .fromTheEnd();
 
         expect(result).toEqual([1, 2, 3, 4]);
