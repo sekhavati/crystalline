@@ -5,17 +5,19 @@ import takeLastWhile from "ramda/src/takeLastWhile";
 import head from "ramda/src/head";
 import drop from "ramda/src/drop";
 import dropLast from "ramda/src/dropLast";
-import dropWhile from "ramda/src/dropWhile";
 import dropLastWhile from "ramda/src/dropLastWhile";
 import dropRepeats from "ramda/src/dropRepeats";
 import last from "ramda/src/last";
 
-const from = (arr) => ({
-  pickQuantity: (quantity) => ({
+// @ts-ignore
+import dropWhile from "ramda/src/dropWhile";
+
+const from = <T>(arr: T[]) => ({
+  pickQuantity: (quantity: number) => ({
     fromTheStart: () => take(quantity, arr),
     fromTheEnd: () => takeLast(quantity, arr),
   }),
-  pickWhile: (predicate) => ({
+  pickWhile: (predicate: (a: T) => boolean) => ({
     fromTheStart: () => takeWhile(predicate, arr),
     fromTheEnd: () => takeLastWhile(predicate, arr),
   }),
@@ -23,11 +25,11 @@ const from = (arr) => ({
   pickLast: () => last(arr),
   dropFirst: () => from(arr).dropQuantity(1).fromTheStart(),
   dropLast: () => from(arr).dropQuantity(1).fromTheEnd(),
-  dropQuantity: (quantity) => ({
+  dropQuantity: (quantity: number) => ({
     fromTheStart: () => drop(quantity, arr),
     fromTheEnd: () => dropLast(quantity, arr),
   }),
-  dropWhile: (predicate) => ({
+  dropWhile: (predicate: (a: T) => boolean) => ({
     fromTheStart: () => dropWhile(predicate, arr),
     fromTheEnd: () => dropLastWhile(predicate, arr),
   }),

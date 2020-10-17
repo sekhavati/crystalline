@@ -4,8 +4,8 @@ describe("sequenceFrom", () => {
   describe("startingWith", () => {
     describe("untilCondition", () => {
       it("should generate an array of items using the rule and seed value up until the terminator condition is met", () => {
-        const rule = (n) => Math.pow(n, 2);
-        const terminator = (n) => n > 1e10;
+        const rule = (n: number) => Math.pow(n, 2);
+        const terminator = (n: number) => n > 1e10;
         const seed = 10;
 
         const result = sequenceFrom(rule)

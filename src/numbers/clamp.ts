@@ -1,8 +1,8 @@
 import rClamp from "ramda/src/clamp";
 
-const clamp = (num) => ({
-  between: (min) => ({
-    and: (max) => rClamp(min, max, num),
+const clamp = (num: number) => ({
+  between: (min: number) => ({
+    and: (max: number) => rClamp(min, max, num),
   }),
 });
 

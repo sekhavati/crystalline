@@ -3,12 +3,22 @@ import { copy } from "./copy";
 describe("copy", () => {
   describe("deeply", () => {
     it("should create a deep copy of the object which may contain other nested objects", () => {
-      const input = [{}, {}, {}];
+      const input = {
+        a: [1, 2, 3],
+        b: "foo",
+        c: {
+          c1: 123,
+        },
+      };
 
       const result = copy(input).deeply();
 
+      expect(input).toEqual(result);
+
+      // Referential checks
       expect(input !== result).toBe(true);
-      expect(input[0] !== result[0]).toBe(true);
+      expect(input.a !== result.a).toBe(true);
+      expect(input.c !== result.c).toBe(true);
     });
   });
 

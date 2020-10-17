@@ -5,19 +5,19 @@ import remove from "ramda/src/remove";
 import uniq from "ramda/src/uniq";
 import without from "ramda/src/without";
 
-const alter = (arr) => ({
-  byApplyingFn: (predicate) => ({
-    atIndex: (index) => adjust(index, predicate, arr),
+const alter = <T>(arr: T[]) => ({
+  byApplyingFn: (transformer: (a: T) => any) => ({
+    atIndex: (index: number) => adjust(index, transformer, arr),
   }),
-  byInsertingBetweenEachItem: (value) => intersperse(value, arr),
-  byMovingItemAtIndex: (fromIndex) => ({
-    toIndex: (toIndex) => move(fromIndex, toIndex, arr),
+  byInsertingBetweenEachItem: (value: any) => intersperse(value, arr),
+  byMovingItemAtIndex: (fromIndex: number) => ({
+    toIndex: (toIndex: number) => move(fromIndex, toIndex, arr),
   }),
-  byRemovingItemsBetweenIndex: (fromIndex) => ({
-    andIndex: (toIndex) => remove(fromIndex, toIndex, arr),
+  byRemovingItemsBetweenIndex: (fromIndex: number) => ({
+    andIndex: (toIndex: number) => remove(fromIndex, toIndex, arr),
   }),
   byRemovingDuplicates: () => uniq(arr),
-  byRemovingItems: (itemsToRemove) => without(itemsToRemove, arr),
+  byRemovingItems: (itemsToRemove: T[]) => without(itemsToRemove, arr),
 });
 
 export { alter };

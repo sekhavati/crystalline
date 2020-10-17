@@ -8,7 +8,6 @@ describe("split", () => {
       const result = split(input).atIndex(1);
 
       expect(result).toEqual([[1], [2, 3]]);
-      expect(input !== result).toBe(true);
     });
   });
 
@@ -19,7 +18,6 @@ describe("split", () => {
       const result = split(input).atFirstEncounterOf((n) => n === 2);
 
       expect(result).toEqual([[1], [2, 3, 1, 2, 3]]);
-      expect(input !== result).toBe(true);
     });
   });
 
@@ -30,7 +28,6 @@ describe("split", () => {
       const result = split(input).everyNthIndex(3);
 
       expect(result).toEqual([[1, 2, 3], [4, 5, 6], [7]]);
-      expect(input !== result).toBe(true);
     });
   });
 
@@ -44,7 +41,6 @@ describe("split", () => {
         ["sss", "bars"],
         ["ttt", "foo"],
       ]);
-      expect(input !== result).toBe(true);
     });
   });
 });
