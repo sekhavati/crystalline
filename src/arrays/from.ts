@@ -47,9 +47,9 @@ const from = (arr) => ({
   }),
   takeFirst: () => head(arr),
   takeLast: () => last(arr),
-  dropFirst: () => from(arr).drop(1).fromTheStart(),
-  dropLast: () => from(arr).drop(1).fromTheEnd(),
-  drop: (quantity) => ({
+  dropFirst: () => from(arr).dropQuantity(1).fromTheStart(),
+  dropLast: () => from(arr).dropQuantity(1).fromTheEnd(),
+  dropQuantity: (quantity) => ({
     fromTheStart: () => drop(quantity, arr),
     fromTheEnd: () => dropLast(quantity, arr),
   }),

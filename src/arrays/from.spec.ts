@@ -105,16 +105,16 @@ describe("from", () => {
     });
   });
 
-  describe("drop", () => {
+  describe("dropQuantity", () => {
     describe("fromTheStart", () => {
       it("should return a new array containing all items from the source array with the first N items removed", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result1 = from(input).drop(1).fromTheStart();
+        const result1 = from(input).dropQuantity(1).fromTheStart();
         expect(result1).toEqual(["bar", "baz"]);
         expect(input !== result1).toBe(true);
 
-        const result2 = from(input).drop(2).fromTheStart();
+        const result2 = from(input).dropQuantity(2).fromTheStart();
         expect(result2).toEqual(["baz"]);
         expect(input !== result2).toBe(true);
       });
@@ -122,7 +122,7 @@ describe("from", () => {
       it("should return an empty array if the quantity requested is greater than the length of the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result = from(input).drop(5).fromTheStart();
+        const result = from(input).dropQuantity(5).fromTheStart();
 
         expect(result).toEqual([]);
         expect(input !== result).toBe(true);
@@ -133,11 +133,11 @@ describe("from", () => {
       it("should return a new array containing all items from the source array with the last N items removed", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result1 = from(input).drop(1).fromTheEnd();
+        const result1 = from(input).dropQuantity(1).fromTheEnd();
         expect(result1).toEqual(["foo", "bar"]);
         expect(input !== result1).toBe(true);
 
-        const result2 = from(input).drop(2).fromTheEnd();
+        const result2 = from(input).dropQuantity(2).fromTheEnd();
         expect(result2).toEqual(["foo"]);
         expect(input !== result2).toBe(true);
       });
@@ -145,7 +145,7 @@ describe("from", () => {
       it("should return an empty array if the quantity requested is greater than the length of the source array", () => {
         const input = ["foo", "bar", "baz"];
 
-        const result = from(input).drop(5).fromTheEnd();
+        const result = from(input).dropQuantity(5).fromTheEnd();
 
         expect(result).toEqual([]);
         expect(input !== result).toBe(true);
