@@ -2,7 +2,6 @@ import mergeDeepLeft from "ramda/src/mergeDeepLeft";
 import mergeDeepRight from "ramda/src/mergeDeepRight";
 import mergeDeepWith from "ramda/src/mergeDeepWith";
 
-// @todo: rename viaFirstObject => favouringFirstObject() ?
 const merge = (obj1) => ({
   deeplyWith: (obj2) => ({
     resolvingConflicts: {
