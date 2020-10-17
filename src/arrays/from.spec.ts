@@ -78,16 +78,30 @@ describe("from", () => {
   });
 
   describe("takeFirst", () => {
-    it("should return a new array containing the first item from the source array ", () => {
+    it("should return the first item from the source array ", () => {
       const result = from(["fi", "fo", "fum"]).takeFirst();
       expect(result).toBe("fi");
     });
   });
 
   describe("takeLast", () => {
-    it("should return a new array containing the last item from the source array ", () => {
+    it("should return the last item from the source array ", () => {
       const result = from(["fi", "fo", "fum"]).takeLast();
       expect(result).toBe("fum");
+    });
+  });
+
+  describe("dropFirst", () => {
+    it("should return a new array containing every item from the source array except the first", () => {
+      const result = from(["fi", "fo", "fum"]).dropFirst();
+      expect(result).toEqual(["fo", "fum"]);
+    });
+  });
+
+  describe("dropLast", () => {
+    it("should return a new array containing every item from the source array except the last", () => {
+      const result = from(["fi", "fo", "fum"]).dropLast();
+      expect(result).toEqual(["fi", "fo"]);
     });
   });
 
