@@ -8,7 +8,8 @@ const split = <T>(arr: T[]) => ({
   everyNthIndex: (n: number) => splitEvery(n, arr),
   atFirstEncounterOf: (predicate: (a: T) => boolean) =>
     splitWhen(predicate, arr),
-  byItemsMatching: (predicate: (a: T) => boolean) => partition(predicate, arr),
+  byItemsSatisfying: (predicate: (a: T) => boolean) =>
+    partition(predicate, arr),
 });
 
 export { split };
