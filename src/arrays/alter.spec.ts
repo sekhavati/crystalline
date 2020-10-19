@@ -73,11 +73,11 @@ describe("alter", () => {
     });
   });
 
-  describe("byRemovingItems", () => {
+  describe("byRemovingItemsEqualTo", () => {
     it("should return a new array with any items matching those supplied removed", () => {
       const input = [1, 2, 1, 3, 4];
 
-      const result = alter(input).byRemovingItems([1, 2]);
+      const result = alter(input).byRemovingItemsEqualTo([1, 2]);
 
       expect(input).not.toEqual(result);
       expect(result).toEqual([3, 4]);
