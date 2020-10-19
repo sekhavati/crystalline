@@ -54,7 +54,21 @@ describe("sort", () => {
           name: "clara",
           age: 40,
         };
-        const input = [clara, bob, alice];
+
+        const input = [
+          {
+            name: "alice",
+            age: 40,
+          },
+          {
+            name: "bob",
+            age: 30,
+          },
+          {
+            name: "clara",
+            age: 40,
+          },
+        ];
 
         const result = sort(input)
           .firstAscendingByProperty("age")

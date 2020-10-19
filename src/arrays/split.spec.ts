@@ -31,11 +31,11 @@ describe("split", () => {
     });
   });
 
-  describe("byItemsMatching", () => {
+  describe("byItemsSatisfying", () => {
     it("should return a new array that contains two arrays after separating the contents of the original into items that satisfy the predicate and those that dont", () => {
       const input = ["sss", "ttt", "foo", "bars"];
 
-      const result = split(input).byItemsMatching((n) => n.includes("s"));
+      const result = split(input).byItemsSatisfying((n) => n.includes("s"));
 
       expect(result).toEqual([
         ["sss", "bars"],
