@@ -131,6 +131,8 @@ merge(person1)
     - `keepKeys`
 - `merge`
     - `deeplyWith`
+
+## `strings`  
     
 ## `numbers`
 - `clamp`
