@@ -90,7 +90,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
           <summary><a href="#"><code>byApplyingFn</code></a></summary>
           <p>
               <br/>          
-              Returns a new array by applying the function supplied at the given index.
+              Create a new array by applying the function supplied at the given index.
 
   ```javascript
   const input = ["a", "b", "c", "d"];
@@ -104,6 +104,23 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
      </p>
     </details>
+    
+    <details>
+          <summary><a href="#"><code>byInsertingBetweenEachItem</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array with the value supplied inserted between each item
+
+  ```javascript
+      const input = ["b", "n", "n", "s"];
+
+      const result = alter(input).byInsertingBetweenEachItem("a");
+
+      expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
+  ```
+
+     </p>
+    </details>    
     
     - `byInsertingBetweenEachItem`
     - `byMovingItemAtIndex`
