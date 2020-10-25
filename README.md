@@ -87,12 +87,21 @@ merge(person1)
 
 ## `arrays`
 - `alter`
-    - `byApplyingFn`
+    - `byApplyingFn`       
     - `byInsertingBetweenEachItem`
     - `byMovingItemAtIndex`
     - `byRemovingDuplicates`
     - `byRemovingItemsBetweenIndex`
     - `byRemovingItemsEqualTo`
+    - <details><summary>Test</summary>
+      <p>
+      
+      ```javascript
+      print("hello world!")
+      ```
+      
+      </p>
+      </details>
 - `find-items-in`
     - `containedIn`
     - `notContainedIn`
@@ -140,6 +149,15 @@ merge(person1)
 ## `misc`
 - `sequence-from`
     - `startingWith`
+    - <details><summary>`startingWith`</summary>
+          <p>
+          
+          ```javascript
+          print("hello world!")
+          ```
+          
+          </p>
+          </details>
     
 ### `arrays.alter.byApplyingFn`
 
@@ -147,8 +165,10 @@ Returns a new array by applying the function supplied at the given index.
 
 <details><summary>View example</summary>
 <p>
-```python
+
+```javascript
 print("hello world!")
 ```
+
 </p>
 </details>
