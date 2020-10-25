@@ -252,89 +252,89 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </details>
 
 - `from`
-    <details>
-        <summary><a href="#"><code>pickQuantity</code></a></summary>
-        <p>   
+    - <details>
+          <summary><a href="#"><code>pickQuantity</code></a></summary>
+          <p>   
               
-       - <details>
-             <summary><a href="#"><code>fromTheStart</code></a></summary>
-             <p>
-             <br/>          
-             Create a new array containing the first N number of items from the input array.
+         - <details>
+               <summary><a href="#"><code>fromTheStart</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing the first N number of items from the input array.
 
 
-          ```javascript
-          const input = ["foo", "bar", "baz"];
-          
-          const result = from(input).pickQuantity(2).fromTheStart();
+            ```javascript
+            const input = ["foo", "bar", "baz"];
             
-          expect(result).toEqual(["foo", "bar"]);
-          ```
+            const result = from(input).pickQuantity(2).fromTheStart();
+            
+            expect(result).toEqual(["foo", "bar"]);
+            ```
 
-           </p>
-         </details>
+             </p>
+           </details>
       
-       - <details>
-             <summary><a href="#"><code>fromTheEnd</code></a></summary>
-             <p>
-             <br/>          
-             Create a new array containing the last N number of items from the input array.
+         - <details>
+               <summary><a href="#"><code>fromTheEnd</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing the last N number of items from the input array.
 
 
-          ```javascript
-          const input = ["foo", "bar", "baz"];
+            ```javascript
+            const input = ["foo", "bar", "baz"];
             
-          const result = from(input).pickQuantity(2).fromTheEnd();
+            const result = from(input).pickQuantity(2).fromTheEnd();
             
-          expect(result).toEqual(["bar", "baz"]);
-          ```
+            expect(result).toEqual(["bar", "baz"]);
+            ```
 
-           </p>
-         </details>
+             </p>
+           </details>
 
-    <details>
-        <summary><a href="#"><code>pickWhile</code></a></summary>
-        <p>   
+    - <details>
+          <summary><a href="#"><code>pickWhile</code></a></summary>
+          <p>   
               
-       - <details>
-             <summary><a href="#"><code>fromTheStart</code></a></summary>
-             <p>
-             <br/>          
-             Create a new array containing items from the start of the input array until when the predicate function returns false.
+         - <details>
+               <summary><a href="#"><code>fromTheStart</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing items from the start of the input array until when the predicate function returns false.
 
 
-          ```javascript
-          const input = [1, 2, 3, 4, 3, 2, 1];
+            ```javascript
+            const input = [1, 2, 3, 4, 3, 2, 1];
             
-          const result = from(input)
-            .pickWhile((n) => n !== 4)
-            .fromTheStart();
+            const result = from(input)
+              .pickWhile((n) => n !== 4)
+              .fromTheStart();
     
-          expect(result).toEqual([1, 2, 3]);
-          ```
+            expect(result).toEqual([1, 2, 3]);
+            ```
 
-           </p>
-         </details>
+             </p>
+           </details>
       
-       - <details>
-             <summary><a href="#"><code>fromTheEnd</code></a></summary>
-             <p>
-             <br/>          
-             Create a new array containing items from the end of the input array until when the predicate function returns false.
+         - <details>
+               <summary><a href="#"><code>fromTheEnd</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing items from the end of the input array until when the predicate function returns false.
 
 
-          ```javascript
-          const input = [1, 2, 3, 4, 3, 2, 1];
+            ```javascript
+            const input = [1, 2, 3, 4, 3, 2, 1];
             
-          const result = from(input)
-            .pickWhile((n) => n !== 4)
-            .fromTheEnd();
+            const result = from(input)
+              .pickWhile((n) => n !== 4)
+              .fromTheEnd();
     
-          expect(result).toEqual([3, 2, 1]);
-          ```
+            expect(result).toEqual([3, 2, 1]);
+            ```
 
-           </p>
-         </details>
+             </p>
+           </details>
 
   - `pickFirst`
   - `pickLast`
