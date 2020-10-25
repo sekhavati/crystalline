@@ -3,7 +3,7 @@ import { from } from "./from";
 describe("from", () => {
   describe("pickQuantity", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing the first N number of items from the source array", () => {
+      it("should return a new array containing the first N number of items from the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result1 = from(input).pickQuantity(1).fromTheStart();
@@ -15,7 +15,7 @@ describe("from", () => {
         expect(input !== result2).toBe(true);
       });
 
-      it("should return all items if the quantity requested is greater than the length of the source array", () => {
+      it("should return all items if the quantity requested is greater than the length of the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result = from(input).pickQuantity(5).fromTheStart();
@@ -26,7 +26,7 @@ describe("from", () => {
     });
 
     describe("fromTheEnd", () => {
-      it("should return a new array containing the last N number of items from the source array", () => {
+      it("should return a new array containing the last N number of items from the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result1 = from(input).pickQuantity(1).fromTheEnd();
@@ -38,7 +38,7 @@ describe("from", () => {
         expect(input !== result2).toBe(true);
       });
 
-      it("should return all items if the quantity requested is greater than the length of the source array", () => {
+      it("should return all items if the quantity requested is greater than the length of the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result = from(input).pickQuantity(5).fromTheEnd();
@@ -51,7 +51,7 @@ describe("from", () => {
 
   describe("pickWhile", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing items from the start of the source array until when the predicate function returns false", () => {
+      it("should return a new array containing items from the start of the input array until when the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -64,7 +64,7 @@ describe("from", () => {
     });
 
     describe("fromTheEnd", () => {
-      it("should return a new array containing items from the end of the source array until when the predicate function returns false ", () => {
+      it("should return a new array containing items from the end of the input array until when the predicate function returns false ", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -78,28 +78,28 @@ describe("from", () => {
   });
 
   describe("pickFirst", () => {
-    it("should return the first item from the source array ", () => {
+    it("should return the first item from the input array ", () => {
       const result = from(["fi", "fo", "fum"]).pickFirst();
       expect(result).toBe("fi");
     });
   });
 
   describe("pickLast", () => {
-    it("should return the last item from the source array ", () => {
+    it("should return the last item from the input array ", () => {
       const result = from(["fi", "fo", "fum"]).pickLast();
       expect(result).toBe("fum");
     });
   });
 
   describe("dropFirst", () => {
-    it("should return a new array containing every item from the source array except the first", () => {
+    it("should return a new array containing every item from the input array except the first", () => {
       const result = from(["fi", "fo", "fum"]).dropFirst();
       expect(result).toEqual(["fo", "fum"]);
     });
   });
 
   describe("dropLast", () => {
-    it("should return a new array containing every item from the source array except the last", () => {
+    it("should return a new array containing every item from the input array except the last", () => {
       const result = from(["fi", "fo", "fum"]).dropLast();
       expect(result).toEqual(["fi", "fo"]);
     });
@@ -107,7 +107,7 @@ describe("from", () => {
 
   describe("dropQuantity", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing all items from the source array with the first N items removed", () => {
+      it("should return a new array containing all items from the input array with the first N items removed", () => {
         const input = ["foo", "bar", "baz"];
 
         const result1 = from(input).dropQuantity(1).fromTheStart();
@@ -119,7 +119,7 @@ describe("from", () => {
         expect(input !== result2).toBe(true);
       });
 
-      it("should return an empty array if the quantity requested is greater than the length of the source array", () => {
+      it("should return an empty array if the quantity requested is greater than the length of the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result = from(input).dropQuantity(5).fromTheStart();
@@ -130,7 +130,7 @@ describe("from", () => {
     });
 
     describe("fromTheEnd", () => {
-      it("should return a new array containing all items from the source array with the last N items removed", () => {
+      it("should return a new array containing all items from the input array with the last N items removed", () => {
         const input = ["foo", "bar", "baz"];
 
         const result1 = from(input).dropQuantity(1).fromTheEnd();
@@ -142,7 +142,7 @@ describe("from", () => {
         expect(input !== result2).toBe(true);
       });
 
-      it("should return an empty array if the quantity requested is greater than the length of the source array", () => {
+      it("should return an empty array if the quantity requested is greater than the length of the input array", () => {
         const input = ["foo", "bar", "baz"];
 
         const result = from(input).dropQuantity(5).fromTheEnd();
@@ -155,7 +155,7 @@ describe("from", () => {
 
   describe("dropWhile", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing items from the head of the source array after the predicate function returns false", () => {
+      it("should return a new array containing items from the head of the input array after the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -166,7 +166,7 @@ describe("from", () => {
         expect(input !== result).toBe(true);
       });
 
-      it("should return a new array containing items from the tail of the source array after the predicate function returns false", () => {
+      it("should return a new array containing items from the tail of the input array after the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
