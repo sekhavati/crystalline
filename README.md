@@ -140,3 +140,15 @@ merge(person1)
 ## `misc`
 - `sequence-from`
     - `startingWith`
+    
+### `arrays.alter.byApplyingFn`
+
+Returns a new array by applying the function supplied at the given index.
+
+<details><summary>View example</summary>
+<p>
+```python
+print("hello world!")
+```
+</p>
+</details>
