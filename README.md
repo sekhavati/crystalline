@@ -292,15 +292,15 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
              </p>
            </details>
 
-    - <details>
-          <summary><a href="#"><code>pickWhile</code></a></summary>
-          <p>   
-              
-         - <details>
-               <summary><a href="#"><code>fromTheStart</code></a></summary>
-               <p>
-               <br/>          
-               Create a new array containing items from the start of the input array until when the predicate function returns false.
+   - <details>
+         <summary><a href="#"><code>pickWhile</code></a></summary>
+         <p>   
+             
+        - <details>
+              <summary><a href="#"><code>fromTheStart</code></a></summary>
+              <p>
+              <br/>          
+              Create a new array containing items from the start of the input array until when the predicate function returns false.
 
 
    ```javascript
@@ -313,15 +313,14 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
    expect(result).toEqual([1, 2, 3]);
    ```
 
-             </p>
-           </details>
-      
-         - <details>
-               <summary><a href="#"><code>fromTheEnd</code></a></summary>
-               <p>
-               <br/>          
-               Create a new array containing items from the end of the input array until when the predicate function returns false.
-
+            </p>
+          </details>
+     
+        - <details>
+              <summary><a href="#"><code>fromTheEnd</code></a></summary>
+              <p>
+              <br/>          
+              Create a new array containing items from the end of the input array until when the predicate function returns false.
 
    ```javascript
    const input = [1, 2, 3, 4, 3, 2, 1];
@@ -333,8 +332,8 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
    expect(result).toEqual([3, 2, 1]);
    ```
 
-             </p>
-           </details>
+            </p>
+          </details>
 
   - `pickFirst`
   - `pickLast`
