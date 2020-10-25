@@ -109,21 +109,36 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
           <summary><a href="#"><code>byInsertingBetweenEachItem</code></a></summary>
           <p>
               <br/>          
-              Create a new array with the value supplied inserted between each item
+              Create a new array with the value supplied inserted between each item.
 
   ```javascript
-      const input = ["b", "n", "n", "s"];
+  const input = ["b", "n", "n", "s"];
 
-      const result = alter(input).byInsertingBetweenEachItem("a");
+  const result = alter(input).byInsertingBetweenEachItem("a");
 
-      expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
+  expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
+  ```
+
+     </p>
+    </details>
+    
+    <details>
+          <summary><a href="#"><code>byMovingItemAtIndex</code></a></summary>
+          <p>
+              <br/>          
+              Return a new array with the item at the index specified moved to the chosen index
+
+  ```javascript
+  const input = ["a", "b", "c", "d", "e", "f"];
+
+  const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
+
+  expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
   ```
 
      </p>
     </details>    
     
-    - `byInsertingBetweenEachItem`
-    - `byMovingItemAtIndex`
     - `byRemovingDuplicates`
     - `byRemovingItemsBetweenIndex`
     - `byRemovingItemsEqualTo`
