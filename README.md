@@ -93,17 +93,17 @@ merge(person1)
               <br/>          
               Returns a new array by applying the function supplied at the given index.
 
-          ```javascript
-          const input = ["a", "b", "c", "d"];
-            
-          const result = alter(input)
-            .byApplyingFn((n) => n.toUpperCase())
-            .atIndex(1);
-    
-          expect(result).toEqual(["a", "B", "c", "d"]);
-          ```
+     ```javascript
+      const input = ["a", "b", "c", "d"];
+        
+      const result = alter(input)
+        .byApplyingFn((n) => n.toUpperCase())
+        .atIndex(1);
+
+      expect(result).toEqual(["a", "B", "c", "d"]);
+     ```
           
-          </p>
+     </p>
     </details>
     
     - `byInsertingBetweenEachItem`
