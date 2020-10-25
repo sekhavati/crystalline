@@ -87,21 +87,30 @@ merge(person1)
 
 ## `arrays`
 - `alter`
-    - `byApplyingFn`       
+    - <details>
+          <summary><code>byApplyingFn</code></summary>
+          <p>
+              <br/>          
+              Returns a new array by applying the function supplied at the given index.
+
+
+        ```javascript
+        const input = ["a", "b", "c", "d"];
+        
+        const result = alter(input)
+          .byApplyingFn((n) => n.toUpperCase())
+          .atIndex(1);
+
+        expect(result).toEqual(["a", "B", "c", "d"]);
+        ```
+
+         </p>
+      </details>       
     - `byInsertingBetweenEachItem`
     - `byMovingItemAtIndex`
     - `byRemovingDuplicates`
     - `byRemovingItemsBetweenIndex`
     - `byRemovingItemsEqualTo`
-    - <details><summary>Test</summary>
-      <p>
-      
-      ```javascript
-      print("hello world!")
-      ```
-      
-      </p>
-      </details>
 - `find-items-in`
     - `containedIn`
     - `notContainedIn`
@@ -149,26 +158,6 @@ merge(person1)
 ## `misc`
 - `sequence-from`
     - `startingWith`
-    - `startingWith` <details>
-          <p>
-          Explanation
-          
-          ```javascript
-          print("hello world!")
-          ```
-          
-          </p>
-          </details>
-    - <details><summary><code>test</code></summary>
-          <p>
-          Description goes here...
-          
-          ```javascript
-          print("hello world!")
-          ```
-          
-          </p>
-          </details>
     
 ### `arrays.alter.byApplyingFn`
 
