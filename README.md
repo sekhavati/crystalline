@@ -253,43 +253,37 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `from`
     - <details>
-          <summary><a href="#"><code>pickQuantity</code></a></summary>
+          <summary><code>Nested Collapsable List</code></summary>
           <p>   
               
          - <details>
-               <summary><a href="#"><code>fromTheStart</code></a></summary>
+               <summary><code>inner item 1</code></summary>
                <p>
                <br/>          
-               Create a new array containing the first N number of items from the input array.
+               Description goes here...
 
 
-   ```javascript
-   const input = ["foo", "bar", "baz"];
-
-   const result = from(input).pickQuantity(2).fromTheStart();
-
-   expect(result).toEqual(["foo", "bar"]);
-   ```
+            ```javascript
+            console.log('hello inner list!')
+            ```
 
              </p>
            </details>
       
          - <details>
-               <summary><a href="#"><code>fromTheEnd</code></a></summary>
+               <summary><code>inner item 2</code></summary>
                <p>
                <br/>          
-               Create a new array containing the last N number of items from the input array.
+               Description goes here...
 
 
             ```javascript
-            const input = ["foo", "bar", "baz"];
-            
-            const result = from(input).pickQuantity(2).fromTheEnd();
-            expect(result).toEqual(["bar", "baz"]);
+            console.log('hello inner list!')
             ```
 
              </p>
            </details>
+
 
   - `pickQuantity`
   - `pickWhile`
