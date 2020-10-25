@@ -85,7 +85,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 ## `arrays`
 
-### `alter`
+- `alter`
     <details>
           <summary><a href="#"><code>byApplyingFn</code></a></summary>
           <p>
@@ -252,23 +252,37 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </details>
 
 - `from`
-    <details>
-          <summary><a href="#"><code>pickQuantity</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array containing items that are only present in one of the two input arrays.
+    - <details>
+          <summary><code>Nested Collapsable List</code></summary>
+          <p>   
+              
+         - <details>
+               <summary><code>inner item 1</code></summary>
+               <p>
+               <br/>          
+               Description goes here...
 
-  ```javascript
-  const input1a = [1, 2, 3, 4];
-  const input1b = [7, 6, 5, 4, 3];
 
-  const result = findItemsIn(input1a).and(input1b).thatAreUnique();
+            ```javascript
+            console.log('hello inner list!')
+            ```
 
-  expect(result).toEqual([1, 2, 7, 6, 5]);
-  ```
+             </p>
+           </details>
+      
+         - <details>
+               <summary><code>inner item 2</code></summary>
+               <p>
+               <br/>          
+               Description goes here...
 
-     </p>
-    </details>
+
+            ```javascript
+            console.log('hello inner list!')
+            ```
+
+             </p>
+           </details>
 
   - `pickQuantity`
   - `pickWhile`
