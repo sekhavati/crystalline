@@ -159,7 +159,7 @@ merge(person1)
           
           </p>
           </details>
-    - <details><summary>```test```</summary>
+    - <details><summary><code>test</code></summary>
           <p>
           Description goes here...
           
