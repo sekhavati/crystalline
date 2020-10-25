@@ -126,7 +126,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
           <summary><a href="#"><code>byMovingItemAtIndex</code></a></summary>
           <p>
               <br/>          
-              Return a new array with the item at the index specified moved to the chosen index
+              Return a new array with the item at the index specified moved to the chosen index.
 
   ```javascript
   const input = ["a", "b", "c", "d", "e", "f"];
@@ -137,11 +137,64 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
   ```
 
      </p>
-    </details>    
+    </details>
     
-    - `byRemovingDuplicates`
-    - `byRemovingItemsBetweenIndex`
-    - `byRemovingItemsEqualTo`
+    <details>
+          <summary><a href="#"><code>byRemovingDuplicates</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array with any duplicates from the original removed.
+
+  ```javascript
+  const input1 = [1, 1, 2, 1];
+  const input2 = [1, "1"];
+  const input3 = [[42], [42]];
+    
+  const result1 = alter(input1).byRemovingDuplicates();
+  const result2 = alter(input2).byRemovingDuplicates();
+  const result3 = alter(input3).byRemovingDuplicates();
+    
+  expect(result1).toEqual([1, 2]);
+  expect(result2).toEqual([1, "1"]); 
+  expect(result3).toEqual([[42]]);
+  ```
+
+     </p>
+    </details>
+    
+    <details>
+          <summary><a href="#"><code>byRemovingItemsBetweenIndex</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array with all items between the two indexes removed.
+
+  ```javascript
+  const input = [1, 2, 3, 4, 5, 6, 7, 8];
+  
+  const result = alter(input).byRemovingItemsBetweenIndex(2).andIndex(3);
+
+  expect(result).toEqual([1, 2, 6, 7, 8]);
+  ```
+
+     </p>
+    </details>
+
+    <details>
+          <summary><a href="#"><code>byRemovingItemsEqualTo</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array with any items matching those supplied removed.
+
+  ```javascript
+  const input = [1, 2, 1, 3, 4];
+  
+  const result = alter(input).byRemovingItemsEqualTo([1, 2]);
+
+  expect(result).toEqual([3, 4]);
+  ```
+
+     </p>
+    </details>
 
 - `find-items-in`
   - `containedIn`
