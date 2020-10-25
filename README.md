@@ -149,8 +149,9 @@ merge(person1)
 ## `misc`
 - `sequence-from`
     - `startingWith`
-    - <details><summary>`startingWith`</summary>
+    - `startingWith` <details>
           <p>
+          Explanation
           
           ```javascript
           print("hello world!")
