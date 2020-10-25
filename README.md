@@ -284,6 +284,37 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
              </p>
            </details>
 
+    - <details>
+          <summary><a href="#"><code>pickWhile</code></a></summary>
+          <p>   
+              
+         - <details>
+               <summary><a href="#"><code>fromTheStart</code></a></summary>
+               <p>
+               <br/>          
+               Description goes here...
+
+
+            ```javascript
+            console.log('hello inner list!')
+            ```
+
+             </p>
+           </details>
+      
+         - <details>
+               <summary><a href="#"><code>fromTheEnd</code></a></summary>
+               <p>
+               <br/>          
+               Description goes here...
+
+
+            ```javascript
+            console.log('hello inner list!')
+            ```
+
+             </p>
+           </details>
 
   - `pickQuantity`
   - `pickWhile`
