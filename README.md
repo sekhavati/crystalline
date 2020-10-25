@@ -159,6 +159,16 @@ merge(person1)
           
           </p>
           </details>
+    - <details><summary>```test```</summary>
+          <p>
+          Description goes here...
+          
+          ```javascript
+          print("hello world!")
+          ```
+          
+          </p>
+          </details>
     
 ### `arrays.alter.byApplyingFn`
 
