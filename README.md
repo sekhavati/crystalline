@@ -263,13 +263,13 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                Create a new array containing the first N number of items from the input array.
 
 
-            ```javascript
-            const input = ["foo", "bar", "baz"];
-            
-            const result = from(input).pickQuantity(2).fromTheStart();
-            
-            expect(result).toEqual(["foo", "bar"]);
-            ```
+   ```javascript
+   const input = ["foo", "bar", "baz"];
+
+   const result = from(input).pickQuantity(2).fromTheStart();
+
+   expect(result).toEqual(["foo", "bar"]);
+   ```
 
              </p>
            </details>
