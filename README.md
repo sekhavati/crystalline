@@ -87,7 +87,7 @@ merge(person1)
 
 ## `arrays`
 - `alter`
-    - <details>
+    <details>
           <summary><code>byApplyingFn</code></summary>
           <p>
               <br/>          
