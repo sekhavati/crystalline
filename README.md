@@ -1,8 +1,8 @@
-# crystalline 
+# crystalline
 
 # Overview
 
-This library contains a collection of utility functions with a strong emphasis on readability. 
+This library contains a collection of utility functions with a strong emphasis on readability.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
@@ -19,8 +19,9 @@ yarn add crystalline
 # Examples
 
 This example demonstrates sorting an array of objects - first by one property, then by another:
+
 ```javascript
-import { sort } from 'crystalline/ararys'
+import { sort } from "crystalline/ararys";
 
 const people = [
   {
@@ -37,12 +38,10 @@ const people = [
   },
 ];
 
-sort(people)
-  .firstAscendingByProperty("age")
-  .thenDescendingByProperty("name");
+sort(people).firstAscendingByProperty("age").thenDescendingByProperty("name");
 
-// => 
-// [  
+// =>
+// [
 //   {
 //     name: "bob",
 //     age: 30,
@@ -62,19 +61,17 @@ This example demonstrates merging two objects - using values from the first obje
 
 ```javascript
 const person1 = {
-    age: 10,
-    contact: { email: "moo@example.com" },
+  age: 10,
+  contact: { email: "moo@example.com" },
 };
 
-const person2 = { 
-    name: "bob",
-    age: 40, 
-    contact: { email: "baa@example.com" } 
+const person2 = {
+  name: "bob",
+  age: 40,
+  contact: { email: "baa@example.com" },
 };
 
-merge(person1)
-  .deeplyWith(person2)
-  .resolvingConflicts.viaFirstObject();
+merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 // result:
 // {
@@ -83,9 +80,11 @@ merge(person1)
 //     contact: { email: "moo@example.com" },
 // }
 ```
+
 # API
 
 ## `arrays`
+
 - `alter`
     <details>
           <summary><a href="#"><code>byApplyingFn</code></a></summary>
@@ -93,16 +92,16 @@ merge(person1)
               <br/>          
               Returns a new array by applying the function supplied at the given index.
 
-     ```javascript
-      const input = ["a", "b", "c", "d"];
-        
-      const result = alter(input)
-        .byApplyingFn((n) => n.toUpperCase())
-        .atIndex(1);
+  ```javascript
+  const input = ["a", "b", "c", "d"];
 
-      expect(result).toEqual(["a", "B", "c", "d"]);
-     ```
-          
+  const result = alter(input)
+    .byApplyingFn((n) => n.toUpperCase())
+    .atIndex(1);
+
+  expect(result).toEqual(["a", "B", "c", "d"]);
+  ```
+
      </p>
     </details>
     
@@ -111,54 +110,58 @@ merge(person1)
     - `byRemovingDuplicates`
     - `byRemovingItemsBetweenIndex`
     - `byRemovingItemsEqualTo`
+
 - `find-items-in`
-    - `containedIn`
-    - `notContainedIn`
-    - `thatAreUnique`
+  - `containedIn`
+  - `notContainedIn`
+  - `thatAreUnique`
 - `from`
-    - `pickQuantity`
-    - `pickWhile`
-    - `pickFirst`
-    - `pickLast`
-    - `dropQuantity`
-    - `dropWhile`
-    - `dropFirst`
-    - `dropLast`
-    - `dropConsecutiveRepeats`
+  - `pickQuantity`
+  - `pickWhile`
+  - `pickFirst`
+  - `pickLast`
+  - `dropQuantity`
+  - `dropWhile`
+  - `dropFirst`
+  - `dropLast`
+  - `dropConsecutiveRepeats`
 - `sort`
-    - `ascendingByProperty`
-    - `descendingByProperty`
-    - `firstAscendingByProperty`
-    - `firstDescendingByProperty`
+  - `ascendingByProperty`
+  - `descendingByProperty`
+  - `firstAscendingByProperty`
+  - `firstDescendingByProperty`
 - `split`
-    - `atFirstEncounterOf`
-    - `atIndex`
-    - `byItemsSatisfying`
-    - `everyNthIndex`
+  - `atFirstEncounterOf`
+  - `atIndex`
+  - `byItemsSatisfying`
+  - `everyNthIndex`
 - `tally`
-    - `by`
+  - `by`
 
 ## `objects`
-- `alter`
-    - `byApplying`
-- `copy`
-    - `deeply`
-    - `discardKey`
-    - `discardKeys`
-    - `keepKey`
-    - `keepKeys`
-- `merge`
-    - `deeplyWith`
 
-## `strings`  
-    
+- `alter`
+  - `byApplying`
+- `copy`
+  - `deeply`
+  - `discardKey`
+  - `discardKeys`
+  - `keepKey`
+  - `keepKeys`
+- `merge`
+  - `deeplyWith`
+
+## `strings`
+
 ## `numbers`
+
 - `clamp`
-    
+
 ## `misc`
+
 - `sequence-from`
-    - `startingWith`
-    
+  - `startingWith`
+
 ### `arrays.alter.byApplyingFn`
 
 Returns a new array by applying the function supplied at the given index.
@@ -167,7 +170,7 @@ Returns a new array by applying the function supplied at the given index.
 <p>
 
 ```javascript
-print("hello world!")
+print("hello world!");
 ```
 
 </p>
