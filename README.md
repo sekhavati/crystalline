@@ -253,11 +253,11 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `from`
     - <details>
-          <summary><a href="#"><code>pickQuantity</code></summary>
+          <summary><a href="#"><code>pickQuantity</code></a></summary>
           <p>   
               
          - <details>
-               <summary><a href="#"><code>fromTheStart</code></summary>
+               <summary><a href="#"><code>fromTheStart</code></a></summary>
                <p>
                <br/>          
                Description goes here...
@@ -271,7 +271,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
            </details>
       
          - <details>
-               <summary><a href="#"><code>fromTheEnd</code></summary>
+               <summary><a href="#"><code>fromTheEnd</code></a></summary>
                <p>
                <br/>          
                Description goes here...
