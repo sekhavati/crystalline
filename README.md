@@ -96,8 +96,8 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
   const input = ["a", "b", "c", "d"];
 
   const result = alter(input)
-    .byApplyingFn((n) => n.toUpperCase())
-    .atIndex(1);
+                   .byApplyingFn((n) => n.toUpperCase())
+                   .atIndex(1);
 
   expect(result).toEqual(["a", "B", "c", "d"]);
   ```
@@ -197,9 +197,60 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </details>
 
 - `find-items-in`
-  - `containedIn`
-  - `notContainedIn`
-  - `thatAreUnique`
+    <details>
+          <summary><a href="#"><code>containedIn</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array containing only items that are present in both the first and second array.
+
+  ```javascript
+  const input1 = [1, 2, 3, 4];
+  const input2 = [7, 6, 5, 4, 3];
+  
+  const result = findItemsIn(input1).containedIn(input2);
+  
+  expect(result).toEqual([3, 4]);
+  ```
+
+     </p>
+    </details>
+
+    <details>
+          <summary><a href="#"><code>notContainedIn</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array containing only items from the first array that are not present in second array.
+
+  ```javascript
+  const input1 = [1, 2, 3, 4];
+  const input2 = [7, 6, 5, 4, 3];
+  
+  const result = findItemsIn(input1).notContainedIn(input2);
+  
+  expect(result).toEqual([1, 2]);
+  ```
+
+     </p>
+    </details>
+
+    <details>
+          <summary><a href="#"><code>thatAreUnique</code></a></summary>
+          <p>
+              <br/>          
+              Create a new array containing items that are only present in one of the two input arrays.
+
+  ```javascript
+  const input1a = [1, 2, 3, 4];
+  const input1b = [7, 6, 5, 4, 3];
+
+  const result = findItemsIn(input1a).and(input1b).thatAreUnique();
+
+  expect(result).toEqual([1, 2, 7, 6, 5]);
+  ```
+
+     </p>
+    </details>
+
 - `from`
   - `pickQuantity`
   - `pickWhile`

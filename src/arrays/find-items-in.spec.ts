@@ -2,7 +2,7 @@ import { findItemsIn } from "./find-items-in";
 
 describe("findItemsIn", () => {
   describe("notContainedIn", () => {
-    it("should return a new array containing items from the first array that are not present in the second", () => {
+    it("should return a new array containing only items from the first array that are not present in second array", () => {
       const input1a = [1, 2, 3, 4];
       const input1b = [7, 6, 5, 4, 3];
       const result1 = findItemsIn(input1a).notContainedIn(input1b);
@@ -27,7 +27,7 @@ describe("findItemsIn", () => {
   });
 
   describe("containedIn", () => {
-    it("should return a new array containing items from the first array that are present in the second", () => {
+    it("should return a new array containing only items that are present in both the first and second array", () => {
       const input1 = [1, 2, 3, 4];
       const input2 = [7, 6, 5, 4, 3];
 
@@ -41,7 +41,7 @@ describe("findItemsIn", () => {
 
   describe("and", () => {
     describe("thatAreUnique", () => {
-      it("should return a new array containing items that only appear in one of the two arrays", () => {
+      it("should return a new array containing items that are only present in one of the two input arrays.", () => {
         const input1a = [1, 2, 3, 4];
         const input1b = [7, 6, 5, 4, 3];
 
