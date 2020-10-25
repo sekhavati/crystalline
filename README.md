@@ -281,18 +281,61 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                Create a new array containing the last N number of items from the input array.
 
 
-            ```javascript
-            const input = ["foo", "bar", "baz"];
+   ```javascript
+   const input = ["foo", "bar", "baz"];
             
-            const result = from(input).pickQuantity(2).fromTheEnd();
-            expect(result).toEqual(["bar", "baz"]);
-            ```
+   const result = from(input).pickQuantity(2).fromTheEnd();
+   
+   expect(result).toEqual(["bar", "baz"]);
+   ```
 
              </p>
            </details>
 
-  - `pickQuantity`
-  - `pickWhile`
+    - <details>
+          <summary><a href="#"><code>pickWhile</code></a></summary>
+          <p>   
+              
+         - <details>
+               <summary><a href="#"><code>fromTheStart</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing items from the start of the input array until when the predicate function returns false.
+
+
+   ```javascript
+   const input = [1, 2, 3, 4, 3, 2, 1];
+   
+   const result = from(input)
+     .pickWhile((n) => n !== 4)
+     .fromTheStart();
+
+   expect(result).toEqual([1, 2, 3]);
+   ```
+
+             </p>
+           </details>
+      
+         - <details>
+               <summary><a href="#"><code>fromTheEnd</code></a></summary>
+               <p>
+               <br/>          
+               Create a new array containing items from the end of the input array until when the predicate function returns false.
+
+
+   ```javascript
+   const input = [1, 2, 3, 4, 3, 2, 1];
+   
+   const result = from(input)
+     .pickWhile((n) => n !== 4)
+     .fromTheEnd();
+
+   expect(result).toEqual([3, 2, 1]);
+   ```
+
+             </p>
+           </details>
+
   - `pickFirst`
   - `pickLast`
   - `dropQuantity`
@@ -336,17 +379,3 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `sequence-from`
   - `startingWith`
-
-### `arrays.alter.byApplyingFn`
-
-Returns a new array by applying the function supplied at the given index.
-
-<details><summary>View example</summary>
-<p>
-
-```javascript
-print("hello world!");
-```
-
-</p>
-</details>
