@@ -88,24 +88,22 @@ merge(person1)
 ## `arrays`
 - `alter`
     <details>
-          <summary><code>byApplyingFn</code></summary>
+          <summary><code><a>byApplyingFn</a></code></summary>
           <p>
               <br/>          
               Returns a new array by applying the function supplied at the given index.
 
-
-        ```javascript
-        const input = ["a", "b", "c", "d"];
+              ```javascript
+              const input = ["a", "b", "c", "d"];
+                
+              const result = alter(input)
+                .byApplyingFn((n) => n.toUpperCase())
+                .atIndex(1);
         
-        const result = alter(input)
-          .byApplyingFn((n) => n.toUpperCase())
-          .atIndex(1);
-
-        expect(result).toEqual(["a", "B", "c", "d"]);
-        ```
-
-         </p>
-      </details>       
+              expect(result).toEqual(["a", "B", "c", "d"]);
+              ```
+          </p>
+    </details>      
     - `byInsertingBetweenEachItem`
     - `byMovingItemAtIndex`
     - `byRemovingDuplicates`
