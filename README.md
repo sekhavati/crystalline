@@ -88,7 +88,7 @@ merge(person1)
 ## `arrays`
 - `alter`
     <details>
-          <summary><code><a>byApplyingFn</a></code></summary>
+          <summary><a href="#"><code>byApplyingFn</code></a></summary>
           <p>
               <br/>          
               Returns a new array by applying the function supplied at the given index.
@@ -103,7 +103,8 @@ merge(person1)
               expect(result).toEqual(["a", "B", "c", "d"]);
               ```
           </p>
-    </details>      
+    </details>
+    
     - `byInsertingBetweenEachItem`
     - `byMovingItemAtIndex`
     - `byRemovingDuplicates`
