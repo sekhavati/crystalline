@@ -260,11 +260,15 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                <summary><a href="#"><code>fromTheStart</code></a></summary>
                <p>
                <br/>          
-               Description goes here...
+               Create a new array containing the first N number of items from the input array.
 
 
             ```javascript
-            console.log('hello inner list!')
+            const input = ["foo", "bar", "baz"];
+            
+            const result = from(input).pickQuantity(2).fromTheStart();
+            
+            expect(result).toEqual(["foo", "bar"]);
             ```
 
              </p>
@@ -274,11 +278,15 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                <summary><a href="#"><code>fromTheEnd</code></a></summary>
                <p>
                <br/>          
-               Description goes here...
+               Create a new array containing the last N number of items from the input array.
 
 
             ```javascript
-            console.log('hello inner list!')
+            const input = ["foo", "bar", "baz"];
+            
+            const result = from(input).pickQuantity(2).fromTheEnd();
+            
+            expect(result).toEqual(["bar", "baz"]);
             ```
 
              </p>
@@ -292,11 +300,17 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                <summary><a href="#"><code>fromTheStart</code></a></summary>
                <p>
                <br/>          
-               Description goes here...
+               Create a new array containing items from the start of the input array until when the predicate function returns false.
 
 
             ```javascript
-            console.log('hello inner list!')
+            const input = [1, 2, 3, 4, 3, 2, 1];
+            
+            const result = from(input)
+              .pickWhile((n) => n !== 4)
+              .fromTheStart();
+    
+            expect(result).toEqual([1, 2, 3]);
             ```
 
              </p>
@@ -306,18 +320,22 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
                <summary><a href="#"><code>fromTheEnd</code></a></summary>
                <p>
                <br/>          
-               Description goes here...
+               Create a new array containing items from the end of the input array until when the predicate function returns false.
 
 
             ```javascript
-            console.log('hello inner list!')
+            const input = [1, 2, 3, 4, 3, 2, 1];
+            
+            const result = from(input)
+              .pickWhile((n) => n !== 4)
+              .fromTheEnd();
+    
+            expect(result).toEqual([3, 2, 1]);
             ```
 
              </p>
            </details>
 
-  - `pickQuantity`
-  - `pickWhile`
   - `pickFirst`
   - `pickLast`
   - `dropQuantity`
