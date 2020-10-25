@@ -253,11 +253,11 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `from`
     - <details>
-          <summary><code>Nested Collapsable List</code></summary>
+          <summary><a href="#"><code>pickQuantity</code></summary>
           <p>   
               
          - <details>
-               <summary><code>inner item 1</code></summary>
+               <summary><a href="#"><code>fromTheStart</code></summary>
                <p>
                <br/>          
                Description goes here...
@@ -271,7 +271,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
            </details>
       
          - <details>
-               <summary><code>inner item 2</code></summary>
+               <summary><a href="#"><code>fromTheEnd</code></summary>
                <p>
                <br/>          
                Description goes here...
