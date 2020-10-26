@@ -338,6 +338,36 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
+    <details>
+    <summary><a href="#"><code>pickFirst</code></a></summary>
+    <p>           
+    <br/>          
+    Return the first item from the input array.
+                
+    ```javascript
+    const result = from(["fi", "fo", "fum"]).pickFirst();
+    
+    expect(result).toBe("fi");
+    ```
+     
+    </p>
+    </details>
+    
+    <details>
+    <summary><a href="#"><code>pickLast</code></a></summary>
+    <p>           
+    <br/>          
+    Return the last item from the input array.
+                
+    ```javascript
+    const result = from(["fi", "fo", "fum"]).pickLast();
+    
+    expect(result).toBe("fum");
+    ```
+     
+    </p>
+    </details>
+
   - `pickFirst`
   - `pickLast`
   - `dropQuantity`
