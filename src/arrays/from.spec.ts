@@ -64,7 +64,7 @@ describe("from", () => {
     });
 
     describe("fromTheEnd", () => {
-      it("should return a new array containing items from the end of the input array until when the predicate function returns false ", () => {
+      it("should return a new array containing items from the end of the input array until when the predicate function returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -78,14 +78,14 @@ describe("from", () => {
   });
 
   describe("pickFirst", () => {
-    it("should return the first item from the input array ", () => {
+    it("should return the first item from the input array", () => {
       const result = from(["fi", "fo", "fum"]).pickFirst();
       expect(result).toBe("fi");
     });
   });
 
   describe("pickLast", () => {
-    it("should return the last item from the input array ", () => {
+    it("should return the last item from the input array", () => {
       const result = from(["fi", "fo", "fum"]).pickLast();
       expect(result).toBe("fum");
     });
@@ -180,7 +180,7 @@ describe("from", () => {
   });
 
   describe("dropConsecutiveRepeats", () => {
-    it("should returns a new array without any consecutively repeating elements ", () => {
+    it("should returns a new array without any consecutively repeating elements", () => {
       const input = [1, 1, 1, 2, 3, 4, 4, 2, 2];
 
       const result = from(input).dropConsecutiveRepeats();
