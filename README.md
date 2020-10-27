@@ -301,7 +301,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
        <summary><a href="#"><code>fromTheStart</code></a></summary>
        <p>
        <br/>          
-       Create a new array containing items from the start of the input array until when the predicate function returns false.
+       Create a new array by selecting items from the start of the input array until the predicate returns false.
            
        ```javascript
         const input = [1, 2, 3, 4, 3, 2, 1];
@@ -320,7 +320,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
        <summary><a href="#"><code>fromTheEnd</code></a></summary>
        <p>
        <br/>          
-       Create a new array containing items from the end of the input array until when the predicate function returns false.
+       Create a new array by selecting items from the end of the input array until the predicate returns false.
            
        ```javascript
         const input = [1, 2, 3, 4, 3, 2, 1];
@@ -409,6 +409,50 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
+    <details>
+    <summary><a href="#"><code>dropWhile</code></a></summary>
+    <p>
+            
+     - <details>
+       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array by removing items from the start of the input array until the predicate returns false.
+           
+       ```javascript
+       const input = [1, 2, 3, 4, 3, 2, 1];
+        
+       const result = from(input)
+         .dropWhile((n) => n <= 2)
+         .fromTheStart();
+
+       expect(result).toEqual([3, 4, 3, 2, 1]);
+       ```
+
+       </p>
+       </details>
+     
+     - <details>
+       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array by removing items from the end of the input array until the predicate returns false.
+           
+       ```javascript
+       const input = [1, 2, 3, 4, 3, 2, 1];
+
+       const result = from(input)
+         .dropWhile((n) => n <= 3)
+         .fromTheEnd();
+
+       expect(result).toEqual([1, 2, 3, 4]);
+       ```
+
+       </p>
+       </details>
+
+     </p>
+    </details>
 
   - `dropWhile`
   - `dropFirst`
@@ -450,17 +494,3 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `sequence-from`
   - `startingWith`
-
-### `arrays.alter.byApplyingFn`
-
-Returns a new array by applying the function supplied at the given index.
-
-<details><summary>View example</summary>
-<p>
-
-```javascript
-print("hello world!");
-```
-
-</p>
-</details>

@@ -51,7 +51,7 @@ describe("from", () => {
 
   describe("pickWhile", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing items from the start of the input array until when the predicate function returns false", () => {
+      it("should return a new array by selecting items from the start of the input array until the predicate returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -64,7 +64,7 @@ describe("from", () => {
     });
 
     describe("fromTheEnd", () => {
-      it("should return a new array containing items from the end of the input array until when the predicate function returns false", () => {
+      it("should return a new array by selecting items from the end of the input array until the predicate returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -155,7 +155,7 @@ describe("from", () => {
 
   describe("dropWhile", () => {
     describe("fromTheStart", () => {
-      it("should return a new array containing items from the head of the input array after the predicate function returns false", () => {
+      it("should return a new array by removing items from the start of the input array until the predicate returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
@@ -165,8 +165,10 @@ describe("from", () => {
         expect(result).toEqual([3, 4, 3, 2, 1]);
         expect(input !== result).toBe(true);
       });
+    });
 
-      it("should return a new array containing items from the tail of the input array after the predicate function returns false", () => {
+    describe("fromTheEnd", () => {
+      it("should return a new array by removing items from the end of the input array until the predicate returns false", () => {
         const input = [1, 2, 3, 4, 3, 2, 1];
 
         const result = from(input)
