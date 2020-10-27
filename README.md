@@ -367,10 +367,49 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      
     </p>
     </details>
+    
+    <details>
+    <summary><a href="#"><code>dropQuantity</code></a></summary>
+    <p>
+            
+     - <details>
+       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array containing all items from the input array with the first N items removed.
+           
+       ```javascript
+        const input = ["foo", "bar", "baz"];
 
-  - `pickFirst`
-  - `pickLast`
-  - `dropQuantity`
+        const result = from(input).dropQuantity(2).fromTheStart();
+
+        expect(result).toEqual(["baz"]);
+       ```
+
+       </p>
+       </details>
+     
+     - <details>
+       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array containing all items from the input array with the last N items removed.
+           
+       ```javascript
+       const input = ["foo", "bar", "baz"];
+       
+       const result = from(input).dropQuantity(2).fromTheEnd();
+
+       expect(result).toEqual(["foo"]);
+       ```
+
+       </p>
+       </details>
+
+     </p>
+    </details>
+
+
   - `dropWhile`
   - `dropFirst`
   - `dropLast`
