@@ -182,7 +182,7 @@ describe("from", () => {
   });
 
   describe("dropConsecutiveRepeats", () => {
-    it("should returns a new array without any consecutively repeating elements", () => {
+    it("should return a new array containing every item from the input array with any consecutively repeated elements removed", () => {
       const input = [1, 1, 1, 2, 3, 4, 4, 2, 2];
 
       const result = from(input).dropConsecutiveRepeats();

@@ -454,10 +454,53 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
-  - `dropWhile`
-  - `dropFirst`
-  - `dropLast`
-  - `dropConsecutiveRepeats`
+    <details>
+    <summary><a href="#"><code>dropFirst</code></a></summary>
+    <p>           
+    <br/>          
+    Create a new array containing every item from the input array except the first.
+                
+    ```javascript
+    const result = from(["fi", "fo", "fum"]).dropFirst();
+    
+    expect(result).toEqual(["fo", "fum"]);
+    ```
+     
+    </p>
+    </details>
+    
+    <details>
+    <summary><a href="#"><code>dropLast</code></a></summary>
+    <p>           
+    <br/>          
+    Create a new array containing every item from the input array except the last.
+                
+    ```javascript
+    const result = from(["fi", "fo", "fum"]).dropLast();
+          
+    expect(result).toEqual(["fi", "fo"]);
+    ```
+     
+    </p>
+    </details>
+
+    <details>
+    <summary><a href="#"><code>dropConsecutiveRepeats</code></a></summary>
+    <p>           
+    <br/>          
+    Create a new array containing every item from the input array with any consecutively repeated elements removed.
+                
+    ```javascript
+    const input = [1, 1, 1, 2, 3, 4, 4, 2, 2];
+
+    const result = from(input).dropConsecutiveRepeats();
+
+    expect(result).toEqual([1, 2, 3, 4, 2]);
+    ```
+     
+    </p>
+    </details>
+
 - `sort`
   - `ascendingByProperty`
   - `descendingByProperty`
