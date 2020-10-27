@@ -2,7 +2,7 @@ import { sort } from "./sort";
 
 describe("sort", () => {
   describe("ascendingByProperty", () => {
-    it("should return a new array with items from the source array sorted in ascending order by a given property", () => {
+    it("should return a new array with items from the input array sorted in ascending order by a given property", () => {
       const input = [
         { name: "Emma", age: 70 },
         { name: "Peter", age: 78 },
@@ -21,7 +21,7 @@ describe("sort", () => {
   });
 
   describe("descendingByProperty", () => {
-    it("should return a new array with items from the source array sorted in descending order by a given property", () => {
+    it("should return a new array with items from the input array sorted in descending order by a given property", () => {
       const input = [
         { name: "Emma", age: 70 },
         { name: "Peter", age: 78 },
@@ -41,7 +41,7 @@ describe("sort", () => {
 
   describe("firstAscendingByProperty", () => {
     describe("thenAscendingByProperty", () => {
-      it("should return a new array with items from the source array sorted in ascending order by the first property, then ascending by the second property", () => {
+      it("should return a new array with items from the input array sorted in ascending order by the first property, then ascending by the second property", () => {
         const alice = {
           name: "alice",
           age: 40,
@@ -67,7 +67,7 @@ describe("sort", () => {
     });
 
     describe("thenDescendingByProperty", () => {
-      it("should return a new array with items from the source array sorted in ascending order by the first property, then descending by the second property", () => {
+      it("should return a new array with items from the input array sorted in ascending order by the first property, then descending by the second property", () => {
         const alice = {
           name: "alice",
           age: 40,
@@ -94,7 +94,7 @@ describe("sort", () => {
 
   describe("firstDescendingByProperty", () => {
     describe("thenAscendingByProperty", () => {
-      it("should return a new array with items from the source array sorted in descending order by the first property, then ascending by the second property", () => {
+      it("should return a new array with items from the input array sorted in descending order by the first property, then ascending by the second property", () => {
         const alice = {
           name: "alice",
           age: 40,
@@ -119,7 +119,7 @@ describe("sort", () => {
     });
 
     describe("thenDescendingByProperty", () => {
-      it("should return a new array with items from the source array sorted in descending order by the first property, then descending by the second property", () => {
+      it("should return a new array with items from the input array sorted in descending order by the first property, then descending by the second property", () => {
         const alice = {
           name: "alice",
           age: 40,

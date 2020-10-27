@@ -502,6 +502,57 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </details>
 
 - `sort`
+    <details>
+    <summary><a href="#"><code>ascendingByProperty</code></a></summary>
+    <p>           
+    <br/>          
+    Create a new array with items from the input array sorted in ascending order by the given property.
+                
+    ```javascript
+    const input = [
+      { name: "Emma", age: 70 },
+      { name: "Peter", age: 78 },
+      { name: "Mikhail", age: 62 },
+    ];
+
+    const result = sort(input).ascendingByProperty("age");
+
+    expect(result).toEqual([
+      { name: "Mikhail", age: 62 },
+      { name: "Emma", age: 70 },
+      { name: "Peter", age: 78 },
+    ]);
+    ```
+     
+    </p>
+    </details>
+
+    <details>
+    <summary><a href="#"><code>descendingByProperty</code></a></summary>
+    <p>           
+    <br/>          
+    Create a new array with items from the input array sorted in descending order by a given property.
+                
+    ```javascript
+    const input = [
+      { name: "Emma", age: 70 },
+      { name: "Peter", age: 78 },
+      { name: "Mikhail", age: 62 },
+    ];
+
+    const result = sort(input).descendingByProperty("age");
+
+    expect(result).toEqual([
+      { name: "Peter", age: 78 },
+      { name: "Emma", age: 70 },
+      { name: "Mikhail", age: 62 },
+    ]);
+    ```
+     
+    </p>
+    </details>
+
+
   - `ascendingByProperty`
   - `descendingByProperty`
   - `firstAscendingByProperty`
