@@ -821,13 +821,103 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
      </details> 
 
-
 - `copy`
-  - `deeply`
-  - `discardKey`
-  - `discardKeys`
-  - `keepKey`
-  - `keepKeys`
+    <details>
+    <summary><a href="#"><code>deeply</code></a></summary>
+    <p>           
+    <br/>          
+    Create a deep copy of the object including any nested objects. 
+                
+    ```javascript
+    const input = {
+      a: [1, 2, 3],
+      b: "foo",
+      c: {
+        c1: 123,
+      },
+    };
+
+    const result = copy(input).deeply();
+
+    expect(input).toEqual(result);
+
+    // Referential checks
+    expect(input !== result).toBe(true);
+    expect(input.a !== result.a).toBe(true);
+    expect(input.c !== result.c).toBe(true);
+    ```
+     
+    </p>
+    </details>   
+    
+    <details>
+    <summary><a href="#"><code>discardKey</code></a></summary>
+    <p>           
+    <br/>          
+    Create a partial copy of the object omitting the key specified. 
+                
+    ```javascript
+    const input = { a: 1, b: 2, c: 3, d: 4 };
+    
+    const result = copy(input).discardKey("a");
+
+    expect(result).toEqual({ b: 2, c: 3, d: 4 });
+    ```
+     
+    </p>
+    </details>   
+    
+    <details>
+    <summary><a href="#"><code>discardKeys</code></a></summary>
+    <p>           
+    <br/>          
+    Create a partial copy of the object omitting the keys specified. 
+                
+    ```javascript
+    const input = { a: 1, b: 2, c: 3, d: 4 };
+    
+    const result = copy(input).discardKeys(["a", "d"]);
+    
+    expect(result).toEqual({ b: 2, c: 3 });
+    ```
+     
+    </p>
+    </details>   
+    
+    <details>
+    <summary><a href="#"><code>keepKey</code></a></summary>
+    <p>           
+    <br/>          
+    Create a partial copy of an object containing only the key specified. 
+                
+    ```javascript
+    const input = { a: 1, b: 2, c: 3, d: 4 };
+    
+    const result = copy(input).keepKey("a");
+
+    expect(result).toEqual({ a: 1 });
+    ```
+     
+    </p>
+    </details>   
+    
+    <details>
+    <summary><a href="#"><code>keepKeys</code></a></summary>
+    <p>           
+    <br/>          
+    Create a partial copy of an object containing only the keys specified. 
+                
+    ```javascript
+    const input = { a: 1, b: 2, c: 3, d: 4 };
+
+    const result = copy(input).keepKeys(["a", "c"]);
+
+    expect(result).toEqual({ a: 1, c: 3 });
+    ```
+     
+    </p>
+    </details>   
+
 - `merge`
   - `deeplyWith`
 

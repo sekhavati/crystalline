@@ -2,7 +2,7 @@ import { copy } from "./copy";
 
 describe("copy", () => {
   describe("deeply", () => {
-    it("should create a deep copy of the object which may contain other nested objects", () => {
+    it("should create a deep copy of the object including any nested objects", () => {
       const input = {
         a: [1, 2, 3],
         b: "foo",
