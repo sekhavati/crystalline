@@ -85,7 +85,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 ## `arrays`
 
-- `alter`
+- <strong>`alter`</strong>
     <details>
           <summary><a href="#"><code>byApplyingFn</code></a></summary>
           <p>
@@ -196,7 +196,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
-- `findItemsIn`
+- <strong>`findItemsIn`</strong>
     <details>
           <summary><a href="#"><code>containedIn</code></a></summary>
           <p>
@@ -251,7 +251,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
-- `from`
+- <strong>`from`</strong>
     <details>
     <summary><a href="#"><code>pickQuantity</code></a></summary>
     <p>
@@ -501,7 +501,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </p>
     </details>
 
-- `sort`
+- <strong>`sort`</strong>
     <details>
     <summary><a href="#"><code>ascendingByProperty</code></a></summary>
     <p>           
@@ -694,7 +694,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
-- `split`
+- <strong>`split`</strong>
     <details>
     <summary><a href="#"><code>atFirstEncounterOf</code></a></summary>
     <p>           
@@ -766,7 +766,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </p>
     </details>
 
-- `tally`
+- <strong>`tally`</strong>
     <details>
     <summary><a href="#"><code>atFirstEncounterOf</code></a></summary>
     <p>           
@@ -786,7 +786,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 ## `objects`
 
-- `alter`
+- <strong>`alter`</strong>
     <details>
     <summary><a href="#"><code>byApplying</code></a></summary>
     <p>
@@ -821,7 +821,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
      </details> 
 
-- `copy`
+- <strong>`copy`</strong>
     <details>
     <summary><a href="#"><code>deeply</code></a></summary>
     <p>           
@@ -918,7 +918,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
     </p>
     </details>   
 
-- `merge`
+- <strong>`merge`</strong>
     <details>
     <summary><a href="#"><code>deeplyWith</code></a></summary>
     <p>
@@ -1022,3 +1022,9 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 - `sequence-from`
   - `startingWith`
+
+# Contributing
+
+- cover how all functions first parameter should be the object type being operated on (ie: array, object etc), helps reduce learning curve with the library
+- favour verbs that already exist (eg: "alter"), helps reduce learning curve with the library
+- favour native javascript (unless for readability sake), helps not reinvent the wheel  
