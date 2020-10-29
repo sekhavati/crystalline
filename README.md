@@ -623,7 +623,77 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
      </p>
     </details>
 
-  - `firstDescendingByProperty`
+    <details>
+    <summary><a href="#"><code>firstDescendingByProperty</code></a></summary>
+    <p>
+            
+     - <details>
+       <summary><a href="#"><code>thenAscendingByProperty</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array with items from the input array sorted in descending order by the first property, then ascending by the second property.
+           
+       ```javascript
+       const alice = {
+         name: "alice",
+         age: 40,
+       };
+       const bob = {
+         name: "bob",
+         age: 30,
+       };
+       const clara = {
+         name: "clara",
+         age: 40,
+       };
+       
+       const input = [clara, bob, alice];
+
+       const result = sort(input)
+         .firstDescendingByProperty("age")
+         .thenAscendingByProperty("name");
+
+       expect(result).toEqual([alice, clara, bob]);
+       ```
+
+       </p>
+       </details>
+     
+     - <details>
+       <summary><a href="#"><code>thenDescendingByProperty</code></a></summary>
+       <p>
+       <br/>          
+       Create a new array with items from the input array sorted in descending order by the first property, then descending by the second property.
+           
+       ```javascript
+       const alice = {
+         name: "alice",
+         age: 40,
+       };
+       const bob = {
+         name: "bob",
+         age: 30,
+       };
+       const clara = {
+         name: "clara",
+         age: 40,
+       };
+       
+       const input = [clara, bob, alice];
+
+       const result = sort(input)
+         .firstDescendingByProperty("age")
+         .thenDescendingByProperty("name");
+
+       expect(result).toEqual([clara, alice, bob]);
+       ```
+
+       </p>
+       </details>
+
+     </p>
+    </details>
+
 - `split`
   - `atFirstEncounterOf`
   - `atIndex`
