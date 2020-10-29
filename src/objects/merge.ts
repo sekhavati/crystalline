@@ -4,12 +4,10 @@ import mergeDeepWith from "ramda/src/mergeDeepWith";
 
 const merge = (obj1: object) => ({
   deeplyWith: (obj2: object) => ({
-    resolvingConflicts: {
-      viaFirstObject: () => mergeDeepLeft(obj1, obj2),
-      viaSecondObject: () => mergeDeepRight(obj1, obj2),
-      viaFunction: (predicate: (a: any, b: any) => any) =>
-        mergeDeepWith(predicate, obj1, obj2),
-    },
+    resolvingConflictsViaFirstObject: () => mergeDeepLeft(obj1, obj2),
+    resolvingConflictsViaSecondObject: () => mergeDeepRight(obj1, obj2),
+    resolvingConflictsViaFn: (resolver: (a: any, b: any) => any) =>
+      mergeDeepWith(resolver, obj1, obj2),
   }),
 });
 
