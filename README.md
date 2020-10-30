@@ -83,6 +83,13 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 # API
 
+Functions are organised into categories based on the type of object they operate on:
+
+- [arrays](#arrays)
+- [objects](#objects)
+- [numbers](#numbers)
+- [misc](#misc)
+
 ## `arrays`
 
 - <strong>`alter`</strong>
@@ -942,7 +949,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
   
        const result = merge(obj1)
          .deeplyWith(obj2)
-         .resolvingConflicts.viaFirstObject();
+         .resolvingConflictsViaFirstObject();
   
        expect(result).toEqual({
          name: "fred",
