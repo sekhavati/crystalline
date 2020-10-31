@@ -4,7 +4,7 @@ This library contains a collection of utility functions with a strong emphasis o
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
-#Table of Contents
+# Table of Contents
 
 - [Introduction](#introduction)
 - [Guiding Principles](#guiding-principles)
@@ -1032,6 +1032,7 @@ Functions are organised into categories based on the type of object they primari
 
 # Contributing
 
+- firstly, thanks for thinking about contributing, we welcome any contributions to help improve this library
 - cover how all functions first parameter should be the object type being operated on (ie: array, object etc), helps reduce learning curve with the library
 - favour verbs that already exist (eg: "alter"), helps reduce learning curve with the library
 - favour native javascript (unless for readability sake), helps not reinvent the wheel  
