@@ -1039,8 +1039,31 @@ Functions are organised into categories based on the type of object they primari
 
 ## `misc`
 
-- `sequence-from`
-  - `startingWith`
+- <strong>`sequenceFrom`</strong>
+    <details>
+    <summary><a href="#"><code>startingWith</code></a></summary>
+    <p>
+            
+     - <details>
+       <summary><a href="#"><code>untilCondition</code></a></summary>
+       <p>
+       <br/>          
+       Create an array of items using the rule and seed value up until the terminator condition is met.
+           
+       ```javascript
+       const rule = (n: number) => Math.pow(n, 2);
+       const terminator = (n: number) => n > 1e10;
+       const seed = 10;
+
+       const result = sequenceFrom(rule)
+         .startingWith(seed)
+         .untilCondition(terminator);
+
+       expect(result).toEqual([10, 100, 10000, 100000000]);
+       ```
+
+       </p>
+       </details>
 
 # Contributing
 
