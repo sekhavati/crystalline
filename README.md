@@ -1,6 +1,5 @@
 # crystalline
-
-This library contains a collection of utility functions with a strong emphasis on readability.
+A modern utility library with a strong emphasis on readability.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
@@ -20,7 +19,17 @@ Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
 # Introduction
 
-todo
+## The problem
+Manipulating data is part and parcel of developing software, but the resulting code can quickly become cumbersome to read.
+You want to minimise the complexity of your codebase in order to give you confidence it's behaving as intended, both for 
+yourself and others.
+ 
+## The solution
+***Readable code is maintainable code.*** 
+
+[Jest Matchers](https://jestjs.io/docs/en/using-matchers) help make your tests easier to reason about. Crystalline takes 
+this philosophy and applies it to your application code. It is a library of highly comprehensible functions that perform 
+operations commonly found in code. 
 
 # Guiding Principles
 
