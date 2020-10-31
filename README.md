@@ -1,85 +1,50 @@
 # crystalline
 
-# Overview
-
 This library contains a collection of utility functions with a strong emphasis on readability.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
+#Table of Contents
+
+- [Introduction](#introduction)
+- [Guiding Principles](#guiding-principles)
+- [Example](#example)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+  - [arrays](#arrays)
+  - [objects](#objects)
+  - [numbers](#numbers)
+  - [misc](#misc)
+- [Contributing](#contributing)
+
+# Introduction
+
+todo
+
+# Guiding Principles
+
+todo
+
+# Example
+
+todo
+
 # Installation
 
+NPM:
 ```shell script
 npm install crystalline
 ```
 
+Yarn:
 ```shell script
 yarn add crystalline
 ```
 
-# Examples
+# Usage
 
-This example demonstrates sorting an array of objects - first by one property, then by another:
-
-```javascript
-import { sort } from "crystalline/ararys";
-
-const people = [
-  {
-    name: "alice",
-    age: 40,
-  },
-  {
-    name: "bob",
-    age: 30,
-  },
-  {
-    name: "clara",
-    age: 40,
-  },
-];
-
-sort(people).firstAscendingByProperty("age").thenDescendingByProperty("name");
-
-// =>
-// [
-//   {
-//     name: "bob",
-//     age: 30,
-//   },
-//   {
-//     name: "clara",
-//     age: 40,
-//   },
-//   {
-//     name: "alice",
-//     age: 40,
-//   }
-// ]
-```
-
-This example demonstrates merging two objects - using values from the first object when the same keys exist in both:
-
-```javascript
-const person1 = {
-  age: 10,
-  contact: { email: "moo@example.com" },
-};
-
-const person2 = {
-  name: "bob",
-  age: 40,
-  contact: { email: "baa@example.com" },
-};
-
-merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
-
-// result:
-// {
-//     name: "bob",
-//     age: 10,
-//     contact: { email: "moo@example.com" },
-// }
-```
+todo
 
 # API
 
