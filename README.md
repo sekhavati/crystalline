@@ -83,7 +83,7 @@ merge(person1).deeplyWith(person2).resolvingConflicts.viaFirstObject();
 
 # API
 
-Functions are organised into categories based on the type of object they operate on:
+Functions are organised into categories based on the type of object they primarily operate on:
 
 - [arrays](#arrays)
 - [objects](#objects)
@@ -1019,11 +1019,23 @@ Functions are organised into categories based on the type of object they operate
      </p>
      </details> 
 
-## `strings`
-
 ## `numbers`
 
-- `clamp`
+- <strong>`clamp`</strong>
+    <details>
+    <summary><a href="#"><code>between</code></a></summary>
+    <p>           
+    <br/>          
+    Restrict a number to be within the range specified. 
+                
+    ```javascript
+    expect(clamp(-5).between(1).and(10)).toBe(1);
+    expect(clamp(15).between(1).and(10)).toBe(10);
+    expect(clamp(4).between(1).and(10)).toBe(4);
+    ```
+     
+    </p>
+    </details>
 
 ## `misc`
 
