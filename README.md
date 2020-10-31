@@ -11,7 +11,7 @@ Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 - [Example](#example)
 - [Installation](#installation)
 - [Usage](#usage)
-- [API](#api)
+- [API Reference](#api-reference)
   - [arrays](#arrays)
   - [objects](#objects)
   - [numbers](#numbers)
@@ -46,7 +46,7 @@ yarn add crystalline
 
 todo
 
-# API
+# API Reference
 
 Functions are organised into categories based on the type of object they primarily operate on:
 
