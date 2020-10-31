@@ -94,113 +94,113 @@ Functions are organised into categories based on the type of object they primari
 
 - <strong>`alter`</strong>
     <details>
-          <summary><a href="#"><code>byApplyingFn</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array by applying the function supplied at the given index.
+    <summary><a href="#"><code>byApplyingFn</code></a></summary>
+    <p>
+    <br/>          
+    Create a new array by applying the function supplied at the given index.
 
-  ```javascript
-  const input = ["a", "b", "c", "d"];
+    ```javascript
+     const input = ["a", "b", "c", "d"];
 
-  const result = alter(input)
-                   .byApplyingFn((n) => n.toUpperCase())
-                   .atIndex(1);
+     const result = alter(input)
+       .byApplyingFn((n) => n.toUpperCase())
+       .atIndex(1);
 
-  expect(result).toEqual(["a", "B", "c", "d"]);
-  ```
+    expect(result).toEqual(["a", "B", "c", "d"]);
+    ```
 
-     </p>
+    </p>
     </details>
     
     <details>
-          <summary><a href="#"><code>byInsertingBetweenEachItem</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array with the value supplied inserted between each item.
+    <summary><a href="#"><code>byInsertingBetweenEachItem</code></a></summary>
+    <p>
+    <br/>          
+    Create a new array with the value supplied inserted between each item.
 
-  ```javascript
-  const input = ["b", "n", "n", "s"];
+    ```javascript
+    const input = ["b", "n", "n", "s"];
 
-  const result = alter(input).byInsertingBetweenEachItem("a");
+    const result = alter(input).byInsertingBetweenEachItem("a");
 
-  expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
-  ```
+    expect(result).toEqual(["b", "a", "n", "a", "n", "a", "s"]);
+    ```
 
-     </p>
+    </p>
     </details>
     
     <details>
-          <summary><a href="#"><code>byMovingItemAtIndex</code></a></summary>
-          <p>
-              <br/>          
-              Return a new array with the item at the index specified moved to the chosen index.
+    <summary><a href="#"><code>byMovingItemAtIndex</code></a></summary>
+    <p>
+    <br/>          
+    Return a new array with the item at the index specified moved to the chosen index.
 
-  ```javascript
-  const input = ["a", "b", "c", "d", "e", "f"];
+    ```javascript
+    const input = ["a", "b", "c", "d", "e", "f"];
 
-  const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
+    const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
 
-  expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
-  ```
+    expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
+    ```
 
-     </p>
+    </p>
     </details>
     
     <details>
-          <summary><a href="#"><code>byRemovingDuplicates</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array with any duplicates from the original removed.
+    <summary><a href="#"><code>byRemovingDuplicates</code></a></summary>
+    <p>
+    <br/>          
+    Create a new array with any duplicates from the original removed.
 
-  ```javascript
-  const input1 = [1, 1, 2, 1];
-  const input2 = [1, "1"];
-  const input3 = [[42], [42]];
-    
-  const result1 = alter(input1).byRemovingDuplicates();
-  const result2 = alter(input2).byRemovingDuplicates();
-  const result3 = alter(input3).byRemovingDuplicates();
-    
-  expect(result1).toEqual([1, 2]);
-  expect(result2).toEqual([1, "1"]); 
-  expect(result3).toEqual([[42]]);
-  ```
+    ```javascript
+    const input1 = [1, 1, 2, 1];
+    const input2 = [1, "1"];
+    const input3 = [[42], [42]];
+      
+    const result1 = alter(input1).byRemovingDuplicates();
+    const result2 = alter(input2).byRemovingDuplicates();
+    const result3 = alter(input3).byRemovingDuplicates();
+      
+    expect(result1).toEqual([1, 2]);
+    expect(result2).toEqual([1, "1"]); 
+    expect(result3).toEqual([[42]]);
+    ```
 
-     </p>
+    </p>
     </details>
     
     <details>
-          <summary><a href="#"><code>byRemovingItemsBetweenIndex</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array with all items between the two indexes removed.
+    <summary><a href="#"><code>byRemovingItemsBetweenIndex</code></a></summary>
+    <p>
+    <br/>          
+    Create a new array with all items between the two indexes removed.
 
-  ```javascript
-  const input = [1, 2, 3, 4, 5, 6, 7, 8];
+    ```javascript
+    const input = [1, 2, 3, 4, 5, 6, 7, 8];
+    
+    const result = alter(input).byRemovingItemsBetweenIndex(2).andIndex(3);
   
-  const result = alter(input).byRemovingItemsBetweenIndex(2).andIndex(3);
+    expect(result).toEqual([1, 2, 6, 7, 8]);
+    ```
 
-  expect(result).toEqual([1, 2, 6, 7, 8]);
-  ```
-
-     </p>
+    </p>
     </details>
 
     <details>
-          <summary><a href="#"><code>byRemovingItemsEqualTo</code></a></summary>
-          <p>
-              <br/>          
-              Create a new array with any items matching those supplied removed.
+    <summary><a href="#"><code>byRemovingItemsEqualTo</code></a></summary>
+    <p>
+    <br/>          
+    Create a new array with any items matching those supplied removed.
 
-  ```javascript
-  const input = [1, 2, 1, 3, 4];
+    ```javascript
+    const input = [1, 2, 1, 3, 4];
+    
+    const result = alter(input).byRemovingItemsEqualTo([1, 2]);
   
-  const result = alter(input).byRemovingItemsEqualTo([1, 2]);
+    expect(result).toEqual([3, 4]);
+    ```
 
-  expect(result).toEqual([3, 4]);
-  ```
-
-     </p>
+    </p>
     </details>
 
 - <strong>`findItemsIn`</strong>
