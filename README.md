@@ -32,11 +32,13 @@ this philosophy and applies it to your application code. It is a library of high
 operations commonly found in code. 
 
 # Guiding Principles
+Utilities are included in this project based on the following guiding principles:
 
-todo
+1) Don't reinvent the wheel when a readable native solution already exists.
+2) Write code as if you were writing a sentence.
+3) Favour brevity but not at the expense of readability.
 
 # Installation
-
 NPM:
 ```shell script
 npm install crystalline
@@ -48,7 +50,6 @@ yarn add crystalline
 ```
 
 # Usage
-
 Import specific ES modules to reduce the size of your bundle:
 ```javascript
 import { sort } from 'crystalline/arrays';
@@ -66,15 +67,14 @@ crystalline.arrays.sort(...);
 
 
 # API Reference
-
 The library organises its functions into categories based on the type of object they primarily operate on. The category dictates 
 what the functions first parameter is. Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
 Vocabulary is reused across categories to reduce the learning curve.
 
-- [arrays](#arrays)
-- [objects](#objects)
-- [numbers](#numbers)
-- [misc](#misc)
+- [Arrays](#arrays)
+- [Objects](#objects)
+- [Numbers](#numbers)
+- [Misc](#misc)
 
 ## `arrays`
 
