@@ -11,10 +11,10 @@ Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Reference](#api-reference)
-  - [arrays](#arrays)
-  - [objects](#objects)
-  - [numbers](#numbers)
-  - [misc](#misc)
+  - [Arrays](#arrays)
+  - [Objects](#objects)
+  - [Numbers](#numbers)
+  - [Misc](#misc)
 - [Contributing](#contributing)
 
 # Introduction
@@ -25,18 +25,16 @@ You want to minimise the complexity of your codebase to ensure it's doing what y
 to make changes in the future.
  
 ## The solution
-_**Readable code is maintainable code.**_ 
-
 [Jest Matchers](https://jestjs.io/docs/en/using-matchers) help make your tests easier to reason about. Crystalline takes 
 this philosophy and applies it to your application code. It is a library of highly comprehensible functions that perform 
 operations commonly found in code. 
 
 # Guiding Principles
-Utilities are included in this project based on the following guiding principles:
 
-1) Don't reinvent the wheel when a readable native solution already exists.
-2) Write code as if you were writing a sentence.
-3) Favour brevity but not at the expense of readability.
+1) _**Readable code is maintainable code.**_ 
+2) Write functions as if you were writing a sentence. 
+3) Don't reinvent the wheel when a readable native solution already exists.
+4) Favour brevity but not at the expense of readability.
 
 # Installation
 NPM:
