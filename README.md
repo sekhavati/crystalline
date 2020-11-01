@@ -21,8 +21,8 @@ Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
 ## The problem
 Manipulating data is part and parcel of developing software, but the resulting code can quickly become difficult to read.
-You want to minimise the complexity of your codebase and ensure it's doing what you intended and have the confidence to 
-change it in the future.
+You want to minimise the complexity of your codebase to ensure it's doing what you intended and have the confidence 
+to make changes in the future.
  
 ## The solution
 _**Readable code is maintainable code.**_ 
@@ -32,10 +32,6 @@ this philosophy and applies it to your application code. It is a library of high
 operations commonly found in code. 
 
 # Guiding Principles
-
-todo
-
-# Example
 
 todo
 
@@ -53,11 +49,27 @@ yarn add crystalline
 
 # Usage
 
-todo
+Import specific ES modules to reduce the size of your bundle:
+```javascript
+import { sort } from 'crystalline/arrays';
+
+sort(...);
+```
+
+Alternatively you can import the whole library:
+
+```javascript
+import crystalline from 'crystalline';
+
+crystalline.arrays.sort(...);
+```
+
 
 # API Reference
 
-Functions are organised into categories based on the type of object they primarily operate on:
+The library organises its functions into categories based on the type of object they primarily operate on. The category dictates 
+what the functions first parameter is. Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
+Vocabulary is reused across categories to reduce the learning curve.
 
 - [arrays](#arrays)
 - [objects](#objects)
@@ -74,11 +86,11 @@ Functions are organised into categories based on the type of object they primari
     Create a new array by applying the function supplied at the given index.
 
     ```javascript
-     const input = ["a", "b", "c", "d"];
+    const input = ["a", "b", "c", "d"];
 
-     const result = alter(input)
-       .byApplyingFn((n) => n.toUpperCase())
-       .atIndex(1);
+    const result = alter(input)
+      .byApplyingFn((n) => n.toUpperCase())
+      .atIndex(1);
 
     expect(result).toEqual(["a", "B", "c", "d"]);
     ```
