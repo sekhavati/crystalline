@@ -1,5 +1,5 @@
 # Crystalline
-A modern utility library with a strong emphasis on readability. Make your code crystal clear :gem:
+A modern utility library with a strong emphasis on readability. Make your code crystal clear.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
@@ -63,10 +63,9 @@ import crystalline from 'crystalline';
 crystalline.arrays.sort(...);
 ```
 
-
 # API Reference
-The library organises its functions into categories based on the type of object they primarily operate on. The category dictates 
-what the functions first parameter is. Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
+The library organises its functions into categories based on the type of variable they primarily operate on. The category 
+indicates what the functions first parameter is. Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
 Vocabulary is reused across categories to reduce the learning curve.
 
 - [Arrays](#arrays)
@@ -1050,8 +1049,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
 
 # Contributing
-Thank you for thinking about contributing to Crystalline, we welcome all feedback and collaboration from the community.
-
+Thank you for thinking about contributing to Crystalline, we welcome all feedback and collaboration from the community. 
 We don't want the process to be laborious, so we've kept our contributing guide reeeeally short. Please take a moment 
 to read through it as doing so will help ensure the library remains consistent as it grows.
 
