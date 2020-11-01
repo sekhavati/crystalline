@@ -32,7 +32,7 @@ operations commonly found in code.
 # Guiding Principles
 
 1) _**Readable code is maintainable code.**_ 
-2) Write functions as if you were writing a sentence. 
+2) Write code as if you were writing a sentence. 
 3) Don't reinvent the wheel when a readable native solution already exists.
 4) Favour brevity but not at the expense of readability.
 
