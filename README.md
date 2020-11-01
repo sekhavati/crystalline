@@ -1,4 +1,4 @@
-# crystalline
+# Crystalline
 A modern utility library with a strong emphasis on readability. Make your code crystal clear.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
@@ -1050,8 +1050,10 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
 
 # Contributing
+Thank you for thinking about contributing to Crystalline, we welcome all feedback and collaboration from the community.
 
-- firstly, thanks for thinking about contributing, we welcome any contributions to help improve this library
-- cover how all functions first parameter should be the object type being operated on (ie: array, object etc), helps reduce learning curve with the library
-- favour verbs that already exist (eg: "alter"), helps reduce learning curve with the library
-- favour native javascript (unless for readability sake), helps not reinvent the wheel  
+We don't want the process to be laborious, so we've kept our contributing guide reeeeally short. Please take a moment 
+to read through it as doing so will help ensure the library remains consistent as it grows.
+
+[Contributing Guide](./CONTRIBUTING.md)
+
