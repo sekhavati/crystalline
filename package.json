@@ -5,9 +5,15 @@
   "main": "index.js",
   "repository": "git@github.com:sekhavati/crystalline.git",
   "author": "Amir Sekhavati",
-  "keywords": ["utilities", "crystalline"],
+  "keywords": [
+    "utilities",
+    "crystalline"
+  ],
   "license": "MIT",
   "private": true,
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "ramda": "^0.27.1"
   },
