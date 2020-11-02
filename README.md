@@ -77,7 +77,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`alter`</strong>
     <details>
-    <summary><a href="#"><code>byApplyingFn</code></a></summary>
+    <summary><code>byApplyingFn</code></summary>
     <p>
     <br/>          
     Create a new array by applying the function supplied at the given index.
@@ -96,7 +96,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>byInsertingBetweenEachItem</code></a></summary>
+    <summary><code>byInsertingBetweenEachItem</code></summary>
     <p>
     <br/>          
     Create a new array with the value supplied inserted between each item.
@@ -113,7 +113,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>byMovingItemAtIndex</code></a></summary>
+    <summary><code>byMovingItemAtIndex</code></summary>
     <p>
     <br/>          
     Return a new array with the item at the index specified moved to the chosen index.
@@ -130,7 +130,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>byRemovingDuplicates</code></a></summary>
+    <summary><code>byRemovingDuplicates</code></summary>
     <p>
     <br/>          
     Create a new array with any duplicates from the original removed.
@@ -153,7 +153,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>byRemovingItemsBetweenIndex</code></a></summary>
+    <summary><code>byRemovingItemsBetweenIndex</code></summary>
     <p>
     <br/>          
     Create a new array with all items between the two indexes removed.
@@ -170,7 +170,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>byRemovingItemsEqualTo</code></a></summary>
+    <summary><code>byRemovingItemsEqualTo</code></summary>
     <p>
     <br/>          
     Create a new array with any items matching those supplied removed.
@@ -188,7 +188,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`findItemsIn`</strong>
     <details>
-    <summary><a href="#"><code>containedIn</code></a></summary>
+    <summary><code>containedIn</code></summary>
     <p>
     <br/>          
     Create a new array containing only items that are present in both the first and second array.
@@ -206,7 +206,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>notContainedIn</code></a></summary>
+    <summary><code>notContainedIn</code></summary>
     <p>
     <br/>          
     Create a new array containing only items from the first array that are not present in second array.
@@ -224,7 +224,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>thatAreUnique</code></a></summary>
+    <summary><code>thatAreUnique</code></summary>
     <p>
     <br/>          
     Create a new array containing items that are only present in one of the two input arrays.
@@ -243,11 +243,11 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`from`</strong>
     <details>
-    <summary><a href="#"><code>pickQuantity</code></a></summary>
+    <summary><code>pickQuantity</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <summary><code>fromTheStart</code></summary>
        <p>
        <br/>          
        Create a new array containing the first N number of items from the input array.
@@ -264,7 +264,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <summary><code>fromTheEnd</code></summary>
        <p>
        <br/>          
        Create a new array containing the last N number of items from the input array.
@@ -284,11 +284,11 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>pickWhile</code></a></summary>
+    <summary><code>pickWhile</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <summary><code>fromTheStart</code></summary>
        <p>
        <br/>          
        Create a new array by selecting items from the start of the input array until the predicate returns false.
@@ -307,7 +307,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <summary><code>fromTheEnd</code></summary>
        <p>
        <br/>          
        Create a new array by selecting items from the end of the input array until the predicate returns false.
@@ -329,7 +329,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>pickFirst</code></a></summary>
+    <summary><code>pickFirst</code></summary>
     <p>           
     <br/>          
     Return the first item from the input array.
@@ -344,7 +344,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>pickLast</code></a></summary>
+    <summary><code>pickLast</code></summary>
     <p>           
     <br/>          
     Return the last item from the input array.
@@ -359,11 +359,11 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>dropQuantity</code></a></summary>
+    <summary><code>dropQuantity</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <summary><code>fromTheStart</code></summary>
        <p>
        <br/>          
        Create a new array containing all items from the input array with the first N items removed.
@@ -380,7 +380,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <summary><code>fromTheEnd</code></summary>
        <p>
        <br/>          
        Create a new array containing all items from the input array with the last N items removed.
@@ -400,11 +400,11 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>dropWhile</code></a></summary>
+    <summary><code>dropWhile</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>fromTheStart</code></a></summary>
+       <summary><code>fromTheStart</code></summary>
        <p>
        <br/>          
        Create a new array by removing items from the start of the input array until the predicate returns false.
@@ -423,7 +423,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>fromTheEnd</code></a></summary>
+       <summary><code>fromTheEnd</code></summary>
        <p>
        <br/>          
        Create a new array by removing items from the end of the input array until the predicate returns false.
@@ -445,7 +445,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>dropFirst</code></a></summary>
+    <summary><code>dropFirst</code></summary>
     <p>           
     <br/>          
     Create a new array containing every item from the input array except the first.
@@ -460,7 +460,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
     
     <details>
-    <summary><a href="#"><code>dropLast</code></a></summary>
+    <summary><code>dropLast</code></summary>
     <p>           
     <br/>          
     Create a new array containing every item from the input array except the last.
@@ -475,7 +475,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>dropConsecutiveRepeats</code></a></summary>
+    <summary><code>dropConsecutiveRepeats</code></summary>
     <p>           
     <br/>          
     Create a new array containing every item from the input array with any consecutively repeated elements removed.
@@ -493,7 +493,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`sort`</strong>
     <details>
-    <summary><a href="#"><code>ascendingByProperty</code></a></summary>
+    <summary><code>ascendingByProperty</code></summary>
     <p>           
     <br/>          
     Create a new array with items from the input array sorted in ascending order by the given property.
@@ -518,7 +518,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>descendingByProperty</code></a></summary>
+    <summary><code>descendingByProperty</code></summary>
     <p>           
     <br/>          
     Create a new array with items from the input array sorted in descending order by a given property.
@@ -543,11 +543,11 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>firstAscendingByProperty</code></a></summary>
+    <summary><code>firstAscendingByProperty</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>thenAscendingByProperty</code></a></summary>
+       <summary><code>thenAscendingByProperty</code></summary>
        <p>
        <br/>          
        Create a new array with items from the input array sorted in ascending order by the first property, then ascending by the second property.
@@ -579,7 +579,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>thenDescendingByProperty</code></a></summary>
+       <summary><code>thenDescendingByProperty</code></summary>
        <p>
        <br/>          
        Create a new array with items from the input array sorted in ascending order by the first property, then descending by the second property.
@@ -614,11 +614,11 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>firstDescendingByProperty</code></a></summary>
+    <summary><code>firstDescendingByProperty</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>thenAscendingByProperty</code></a></summary>
+       <summary><code>thenAscendingByProperty</code></summary>
        <p>
        <br/>          
        Create a new array with items from the input array sorted in descending order by the first property, then ascending by the second property.
@@ -650,7 +650,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
      
      - <details>
-       <summary><a href="#"><code>thenDescendingByProperty</code></a></summary>
+       <summary><code>thenDescendingByProperty</code></summary>
        <p>
        <br/>          
        Create a new array with items from the input array sorted in descending order by the first property, then descending by the second property.
@@ -686,7 +686,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`split`</strong>
     <details>
-    <summary><a href="#"><code>atFirstEncounterOf</code></a></summary>
+    <summary><code>atFirstEncounterOf</code></summary>
     <p>           
     <br/>          
     Create a new array that contains two arrays after splitting the original at the first point where the predicate holds true.
@@ -703,7 +703,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><a href="#"><code>atIndex</code></a></summary>
+    <summary><code>atIndex</code></summary>
     <p>           
     <br/>          
     Create a new array that contains two arrays after splitting the original at the index specified.
@@ -720,7 +720,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>    
     
     <details>
-    <summary><a href="#"><code>byItemsSatisfying</code></a></summary>
+    <summary><code>byItemsSatisfying</code></summary>
     <p>           
     <br/>          
     Create a new array that contains two arrays after separating the contents of the original into items that satisfy the predicate and those that don't.
@@ -740,7 +740,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>    
     
     <details>
-    <summary><a href="#"><code>everyNthIndex</code></a></summary>
+    <summary><code>everyNthIndex</code></summary>
     <p>           
     <br/>          
     Create a new array that contains multiple other arrays that are the result of splitting the original every N items.
@@ -758,7 +758,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`tally`</strong>
     <details>
-    <summary><a href="#"><code>atFirstEncounterOf</code></a></summary>
+    <summary><code>atFirstEncounterOf</code></summary>
     <p>           
     <br/>          
     Create an object that contains a count of elements in an array according to how many match a key generated by the supplied function.
@@ -778,11 +778,11 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`alter`</strong>
     <details>
-    <summary><a href="#"><code>byApplying</code></a></summary>
+    <summary><code>byApplying</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>toKey</code></a></summary>
+       <summary><code>toKey</code></summary>
        <p>
        <br/>          
        Create a new object that is a copy of the original but with the transformation applied to the key specified.
@@ -813,7 +813,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`copy`</strong>
     <details>
-    <summary><a href="#"><code>deeply</code></a></summary>
+    <summary><code>deeply</code></summary>
     <p>           
     <br/>          
     Create a deep copy of the object including any nested objects. 
@@ -841,7 +841,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>   
     
     <details>
-    <summary><a href="#"><code>discardKey</code></a></summary>
+    <summary><code>discardKey</code></summary>
     <p>           
     <br/>          
     Create a partial copy of the object omitting the key specified. 
@@ -858,7 +858,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>   
     
     <details>
-    <summary><a href="#"><code>discardKeys</code></a></summary>
+    <summary><code>discardKeys</code></summary>
     <p>           
     <br/>          
     Create a partial copy of the object omitting the keys specified. 
@@ -875,7 +875,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>   
     
     <details>
-    <summary><a href="#"><code>keepKey</code></a></summary>
+    <summary><code>keepKey</code></summary>
     <p>           
     <br/>          
     Create a partial copy of an object containing only the key specified. 
@@ -892,7 +892,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>   
     
     <details>
-    <summary><a href="#"><code>keepKeys</code></a></summary>
+    <summary><code>keepKeys</code></summary>
     <p>           
     <br/>          
     Create a partial copy of an object containing only the keys specified. 
@@ -910,11 +910,11 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`merge`</strong>
     <details>
-    <summary><a href="#"><code>deeplyWith</code></a></summary>
+    <summary><code>deeplyWith</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>resolvingConflictsViaFirstObject</code></a></summary>
+       <summary><code>resolvingConflictsViaFirstObject</code></summary>
        <p>
        <br/>          
        Create a new object with all properties from the input objects, using values from the first object when the same keys exist in both.
@@ -945,7 +945,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
        
      - <details>
-       <summary><a href="#"><code>resolvingConflictsViaSecondObject</code></a></summary>
+       <summary><code>resolvingConflictsViaSecondObject</code></summary>
        <p>
        <br/>          
        Create a new object with all properties from the input objects, using values from the second object when the same keys exist in both.
@@ -976,7 +976,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        </details>
 
      - <details>
-       <summary><a href="#"><code>resolvingConflictsViaFn</code></a></summary>
+       <summary><code>resolvingConflictsViaFn</code></summary>
        <p>
        <br/>          
        Create a new object with all properties from the input objects, using the resolver function to derive a value for keys that exist in both.
@@ -1006,7 +1006,7 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`clamp`</strong>
     <details>
-    <summary><a href="#"><code>between</code></a></summary>
+    <summary><code>between</code></summary>
     <p>           
     <br/>          
     Restrict a number to be within the range specified. 
@@ -1024,11 +1024,11 @@ Vocabulary is reused across categories to reduce the learning curve.
 
 - <strong>`sequenceFrom`</strong>
     <details>
-    <summary><a href="#"><code>startingWith</code></a></summary>
+    <summary><code>startingWith</code></summary>
     <p>
             
      - <details>
-       <summary><a href="#"><code>untilCondition</code></a></summary>
+       <summary><code>untilCondition</code></summary>
        <p>
        <br/>          
        Create an array of items using the rule and seed value up until the terminator condition is met.
