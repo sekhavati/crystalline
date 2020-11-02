@@ -10,6 +10,6 @@ as it grows.
 - The category dictates the type of variable the function should accept as its first parameter.
 - Functions should be [pure](https://en.wikipedia.org/wiki/Pure_function). 
 - Reuse vocabulary (alter, split etc) across categories where possible to reduce the learning curve for our users.
-- Write adequate units tests.
+- Add tests and documentation similar to existing functions.
 
 :gem:
