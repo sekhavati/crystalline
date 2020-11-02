@@ -7,7 +7,6 @@ Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
 - [Introduction](#introduction)
 - [Guiding Principles](#guiding-principles)
-- [Example](#example)
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Reference](#api-reference)
