@@ -64,8 +64,9 @@ crystalline.arrays.sort(...);
 ```
 
 # API Reference
-The library organises its functions into categories based on the type of variable they primarily operate on. The category 
-indicates what the functions first parameter is. Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
+The library organises its functions into categories based on the type of variable they primarily operate on. 
+All functions within a category expect that type of variable as their first parameter. 
+Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
 Vocabulary is reused across categories to reduce the learning curve.
 
 - [Arrays](#arrays)
