@@ -7,5 +7,6 @@ yarn build
 cp package.json LICENSE README.md dist/
 cd dist/
 npm login
-npx np --preview
+npx np --preview --no-tests
 npm logout
+cd ../
