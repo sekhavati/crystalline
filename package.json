@@ -6,8 +6,16 @@
   "repository": "git@github.com:sekhavati/crystalline.git",
   "author": "Amir Sekhavati",
   "keywords": [
+    "crystalline",
+    "fp",
+    "functional",
+    "pure",
+    "readability",
+    "readable",
+    "toolkit",
+    "utility",
     "utilities",
-    "crystalline"
+    "utils"
   ],
   "license": "MIT",
   "dependencies": {
