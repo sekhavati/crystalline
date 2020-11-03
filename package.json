@@ -1,10 +1,15 @@
 {
   "name": "crystalline",
-  "version": "0.0.1",
   "description": "A modern utility library with a strong emphasis on readability. Make your code crystal clear.",
-  "main": "index.js",
-  "repository": "git@github.com:sekhavati/crystalline.git",
   "author": "Amir Sekhavati",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sekhavati/crystalline.git"
+  },
+  "homepage": "https://github.com/sekhavati/crystalline",
+  "bugs": "https://github.com/sekhavati/crystalline/issues",
+  "main": "index.js",
   "keywords": [
     "crystalline",
     "fp",
