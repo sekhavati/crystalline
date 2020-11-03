@@ -25,7 +25,7 @@ to make changes in the future.
  
 ## The solution
 [Jest Matchers](https://jestjs.io/docs/en/using-matchers) help make your tests easier to reason about. Crystalline takes 
-this philosophy and applies it to your application code. It is a library of highly comprehensible functions that perform 
+this approach and applies it to your application code. It is a library of highly comprehensible functions that perform 
 operations commonly found in code. 
 
 # Guiding Principles
