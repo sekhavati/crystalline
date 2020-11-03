@@ -1,5 +1,5 @@
 # Crystalline
-A modern utility library with a strong emphasis on readability. Make your code crystal clear.
+> A modern utility library with a strong emphasis on readability. Make your code crystal clear.
 
 Inspired by [Jest Matchers](https://jestjs.io/docs/en/using-matchers).
 
