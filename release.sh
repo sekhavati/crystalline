@@ -6,5 +6,5 @@ yarn clean
 yarn build
 cp package.json LICENSE README.md dist/
 cd dist/
-npm login
+yarn login
 npx np --preview
