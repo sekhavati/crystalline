@@ -1,6 +1,6 @@
 {
   "name": "crystalline",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A modern utility library with a strong emphasis on readability. Make your code crystal clear.",
   "main": "index.js",
   "repository": "git@github.com:sekhavati/crystalline.git",
@@ -10,9 +10,6 @@
     "crystalline"
   ],
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "ramda": "^0.27.1"
   },
