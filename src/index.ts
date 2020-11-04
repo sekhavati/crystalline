@@ -1,7 +1,7 @@
-import arrays from "./arrays";
-import numbers from "./numbers";
-import objects from "./objects";
-import misc from "./misc";
+import * as arrays from "./arrays";
+import * as numbers from "./numbers";
+import * as objects from "./objects";
+import * as misc from "./misc";
 
 export default {
   arrays,

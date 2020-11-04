@@ -5,4 +5,4 @@ import { sort } from "./sort";
 import { split } from "./split";
 import { tally } from "./tally";
 
-export default { alter, findItemsIn, from, sort, split, tally };
+export { alter, findItemsIn, from, sort, split, tally };
