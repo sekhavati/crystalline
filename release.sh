@@ -4,9 +4,8 @@ set -o pipefail
 
 yarn clean
 yarn build
+npx np --no-publish --preview
 cp package.json LICENSE README.md dist/
-cd dist/
 npm login
-npx np --no-tests
+npm publish dist --dry-run
 npm logout
-cd ../
