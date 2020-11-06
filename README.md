@@ -925,18 +925,20 @@ Vocabulary is reused across categories to reduce the learning curve.
          age: 10,
          contact: { email: "moo@example.com" },
        };
-       const obj2 = { 
-         age: 40, 
-         contact: { email: "baa@example.com" } 
+       const obj2 = {
+         age: 40,
+         hair: "blonde",
+         contact: { email: "baa@example.com" },
        };
-  
+
        const result = merge(obj1)
          .deeplyWith(obj2)
          .resolvingConflictsViaFirstObject();
-  
+
        expect(result).toEqual({
          name: "fred",
          age: 10,
+         hair: "blonde",
          contact: { email: "moo@example.com" },
        });
        ```
@@ -956,18 +958,20 @@ Vocabulary is reused across categories to reduce the learning curve.
          age: 10,
          contact: { email: "moo@example.com" },
        };
-       const obj2 = { 
-         age: 40, 
-         contact: { email: "baa@example.com" } 
+       const obj2 = {
+         age: 40,
+         hair: "blonde",
+         contact: { email: "baa@example.com" },
        };
-  
+
        const result = merge(obj1)
          .deeplyWith(obj2)
          .resolvingConflictsViaSecondObject();
-  
+
        expect(result).toEqual({
          name: "fred",
          age: 40,
+         hair: "blonde",
          contact: { email: "baa@example.com" },
        });
        ```
@@ -1033,7 +1037,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        <br/>          
        Create an array of items using the rule and seed value up until the terminator condition is met.
        
-       :warning: Ensure the rule function is [pure](https://en.wikipedia.org/wiki/Pure_function) and terminator 
+       :warning: Ensure your rule function is [pure](https://en.wikipedia.org/wiki/Pure_function) and terminator 
        condition will always be met, otherwise you risk creating an infinite loop. 
            
        ```javascript

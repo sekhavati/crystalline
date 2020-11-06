@@ -9,7 +9,11 @@ describe("merge", () => {
           age: 10,
           contact: { email: "moo@example.com" },
         };
-        const obj2 = { age: 40, contact: { email: "baa@example.com" } };
+        const obj2 = {
+          age: 40,
+          hair: "blonde",
+          contact: { email: "baa@example.com" },
+        };
 
         const result = merge(obj1)
           .deeplyWith(obj2)
@@ -18,6 +22,7 @@ describe("merge", () => {
         expect(result).toEqual({
           name: "fred",
           age: 10,
+          hair: "blonde",
           contact: { email: "moo@example.com" },
         });
         expect(obj1 !== result).toBe(true);
@@ -32,7 +37,11 @@ describe("merge", () => {
           age: 10,
           contact: { email: "moo@example.com" },
         };
-        const obj2 = { age: 40, contact: { email: "baa@example.com" } };
+        const obj2 = {
+          age: 40,
+          hair: "blonde",
+          contact: { email: "baa@example.com" },
+        };
 
         const result = merge(obj1)
           .deeplyWith(obj2)
@@ -41,6 +50,7 @@ describe("merge", () => {
         expect(result).toEqual({
           name: "fred",
           age: 40,
+          hair: "blonde",
           contact: { email: "baa@example.com" },
         });
         expect(obj1 !== result).toBe(true);
