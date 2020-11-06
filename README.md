@@ -1032,6 +1032,9 @@ Vocabulary is reused across categories to reduce the learning curve.
        <p>
        <br/>          
        Create an array of items using the rule and seed value up until the terminator condition is met.
+       
+       :warning: Ensure the rule function is [pure](https://en.wikipedia.org/wiki/Pure_function) and terminator 
+       condition will always be met, otherwise you risk creating an infinite loop. 
            
        ```javascript
        const rule = (n: number) => Math.pow(n, 2);
