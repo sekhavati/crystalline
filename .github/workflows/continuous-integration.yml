@@ -50,4 +50,4 @@ jobs:
         run: yarn install
 
       - name: Run application tests
-        run: yarn test
+        run: yarn test --verbose
