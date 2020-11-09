@@ -58,14 +58,14 @@ describe("merge", () => {
       });
     });
 
-    describe("resolvingConflictsViaFn", () => {
+    describe("resolvingConflictsByApplying", () => {
       it("should create a new object with all properties from the input objects, using the resolver function to derive a value for keys that exist in both", () => {
         const obj1 = { a: true, c: { values: [10, 20] } };
         const obj2 = { b: true, c: { values: [15, 35] } };
 
         const result = merge(obj1)
           .deeplyWith(obj2)
-          .resolvingConflictsViaFn((x, y) => [...x, ...y]);
+          .resolvingConflictsByApplying((x, y) => [...x, ...y]);
 
         expect(result).toEqual({
           a: true,

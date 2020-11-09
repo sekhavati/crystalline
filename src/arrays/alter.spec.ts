@@ -1,13 +1,13 @@
 import { alter } from "./alter";
 
 describe("alter", () => {
-  describe("byApplyingFn", () => {
+  describe("byApplying", () => {
     describe("atIndex", () => {
       it("should return a new array with the function supplied at the given index", () => {
         const input = ["a", "b", "c", "d"];
 
         const result = alter(input)
-          .byApplyingFn((n) => n.toUpperCase())
+          .byApplying((n) => n.toUpperCase())
           .atIndex(1);
 
         expect(result).toEqual(["a", "B", "c", "d"]);

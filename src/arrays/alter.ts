@@ -6,7 +6,7 @@ import uniq from "ramda/src/uniq";
 import without from "ramda/src/without";
 
 const alter = <T>(arr: T[]) => ({
-  byApplyingFn: (transformer: (a: T) => any) => ({
+  byApplying: (transformer: (a: T) => any) => ({
     atIndex: (index: number) => adjust(index, transformer, arr),
   }),
   byInsertingBetweenEachItem: (value: any) => intersperse(value, arr),

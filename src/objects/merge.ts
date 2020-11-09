@@ -6,7 +6,7 @@ const merge = (obj1: object) => ({
   deeplyWith: (obj2: object) => ({
     resolvingConflictsViaFirstObject: () => mergeDeepLeft(obj1, obj2),
     resolvingConflictsViaSecondObject: () => mergeDeepRight(obj1, obj2),
-    resolvingConflictsViaFn: (resolver: (a: any, b: any) => any) =>
+    resolvingConflictsByApplying: (resolver: (a: any, b: any) => any) =>
       mergeDeepWith(resolver, obj1, obj2),
   }),
 });
