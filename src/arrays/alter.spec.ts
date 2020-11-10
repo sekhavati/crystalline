@@ -28,7 +28,7 @@ describe("alter", () => {
   });
 
   describe("byMovingItemAtIndex", () => {
-    describe("to", () => {
+    describe("toIndex", () => {
       it("should return a new array with the item at the index specified moved to the chosen index", () => {
         const input = ["a", "b", "c", "d", "e", "f"];
 
@@ -77,7 +77,7 @@ describe("alter", () => {
     it("should return a new array with any items matching those supplied removed", () => {
       const input = [1, 2, 1, 3, 4];
 
-      const result = alter(input).byRemovingItemsEqualTo([1, 2]);
+      const result = alter(input).byRemovingItemsEqualTo(1, 2);
 
       expect(input).not.toEqual(result);
       expect(result).toEqual([3, 4]);

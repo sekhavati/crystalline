@@ -178,7 +178,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     ```javascript
     const input = [1, 2, 1, 3, 4];
     
-    const result = alter(input).byRemovingItemsEqualTo([1, 2]);
+    const result = alter(input).byRemovingItemsEqualTo(1, 2);
   
     expect(result).toEqual([3, 4]);
     ```
@@ -841,23 +841,6 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>   
     
     <details>
-    <summary><code>discardKey</code></summary>
-    <p>           
-    <br/>          
-    Create a partial copy of the object omitting the key specified. 
-                
-    ```javascript
-    const input = { a: 1, b: 2, c: 3, d: 4 };
-    
-    const result = copy(input).discardKey("a");
-
-    expect(result).toEqual({ b: 2, c: 3, d: 4 });
-    ```
-     
-    </p>
-    </details>   
-    
-    <details>
     <summary><code>discardKeys</code></summary>
     <p>           
     <br/>          
@@ -866,26 +849,9 @@ Vocabulary is reused across categories to reduce the learning curve.
     ```javascript
     const input = { a: 1, b: 2, c: 3, d: 4 };
     
-    const result = copy(input).discardKeys(["a", "d"]);
+    const result = copy(input).discardKeys("a", "d");
     
     expect(result).toEqual({ b: 2, c: 3 });
-    ```
-     
-    </p>
-    </details>   
-    
-    <details>
-    <summary><code>keepKey</code></summary>
-    <p>           
-    <br/>          
-    Create a partial copy of an object containing only the key specified. 
-                
-    ```javascript
-    const input = { a: 1, b: 2, c: 3, d: 4 };
-    
-    const result = copy(input).keepKey("a");
-
-    expect(result).toEqual({ a: 1 });
     ```
      
     </p>
@@ -900,7 +866,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     ```javascript
     const input = { a: 1, b: 2, c: 3, d: 4 };
 
-    const result = copy(input).keepKeys(["a", "c"]);
+    const result = copy(input).keepKeys("a", "c");
 
     expect(result).toEqual({ a: 1, c: 3 });
     ```
