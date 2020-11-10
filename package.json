@@ -2,7 +2,7 @@
   "name": "crystalline",
   "description": "A modern utility library with a strong emphasis on readability. Make your code crystal clear.",
   "author": "Amir Sekhavati <amir@sekhaconvalley.com> (https://github.com/sekhavati)",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/sekhavati/crystalline.git"
