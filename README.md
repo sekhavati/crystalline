@@ -63,7 +63,7 @@ crystalline.arrays.sort(...);
 ```
 
 # API Reference
-The library organises its functions into categories based on the type of variable they primarily operate on. 
+The library organises its functions into *categories* based on the type of variable they primarily operate on. 
 All functions within a category expect that type of variable as their first parameter. 
 Functions are always [pure](https://en.wikipedia.org/wiki/Pure_function). 
 Vocabulary is reused across categories to reduce the learning curve.
@@ -79,19 +79,26 @@ Vocabulary is reused across categories to reduce the learning curve.
     <details>
     <summary><code>byApplying</code></summary>
     <p>
-    <br/>          
-    Create a new array by applying the function supplied at the given index.
 
-    ```javascript
-    const input = ["a", "b", "c", "d"];
+     - <details>
+       <summary><code>atIndex</code></summary>
+       <p>
+       <br/>          
+       Create a new array by applying the function supplied at the given index.
+   
+       ```javascript
+       const input = ["a", "b", "c", "d"];
+   
+       const result = alter(input)
+         .byApplying((n) => n.toUpperCase())
+         .atIndex(1);
+   
+       expect(result).toEqual(["a", "B", "c", "d"]);
+       ```
 
-    const result = alter(input)
-      .byApplying((n) => n.toUpperCase())
-      .atIndex(1);
-
-    expect(result).toEqual(["a", "B", "c", "d"]);
-    ```
-
+       </p>
+       </details>
+  
     </p>
     </details>
     
@@ -115,16 +122,23 @@ Vocabulary is reused across categories to reduce the learning curve.
     <details>
     <summary><code>byMovingItemAtIndex</code></summary>
     <p>
-    <br/>          
-    Return a new array with the item at the index specified moved to the chosen index.
 
-    ```javascript
-    const input = ["a", "b", "c", "d", "e", "f"];
-
-    const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
-
-    expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
-    ```
+     - <details>
+       <summary><code>toIndex</code></summary>
+       <p>
+       <br/>          
+       Return a new array with the item at the index specified moved to the chosen index.
+   
+       ```javascript
+       const input = ["a", "b", "c", "d", "e", "f"];
+   
+       const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
+   
+       expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
+       ```
+       
+       </p>
+       </details>
 
     </p>
     </details>
@@ -1020,6 +1034,9 @@ Vocabulary is reused across categories to reduce the learning curve.
 
        </p>
        </details>
+    
+    </p>
+    </details>
 
 # Contributing
 Thank you for thinking about contributing to Crystalline, we welcome all feedback and collaboration from the community. 
