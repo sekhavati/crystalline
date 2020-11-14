@@ -73,6 +73,17 @@ describe("alter", () => {
         expect(input).not.toEqual(result);
       });
     });
+
+    describe("andTheEnd", () => {
+      it("should return a new array with all items between the index specified and the end removed", () => {
+        const input = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        const result = alter(input).byRemovingItemsBetweenIndex(3).andTheEnd();
+
+        expect(result).toEqual([1, 2, 3]);
+        expect(input).not.toEqual(result);
+      });
+    });
   });
 
   describe("byRemovingDuplicates", () => {

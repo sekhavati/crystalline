@@ -17,6 +17,7 @@ const alter = <T>(arr: T[]) => ({
   }),
   byRemovingItemsBetweenIndex: (fromIndex: number) => ({
     andIndex: (toIndex: number) => remove(fromIndex, toIndex, arr),
+    andTheEnd: () => remove(fromIndex, arr.length - 1, arr),
   }),
   byRemovingDuplicates: () => uniq(arr),
   byRemovingItemsEqualTo: (...itemsToRemove: T[]) =>
