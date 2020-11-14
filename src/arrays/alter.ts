@@ -12,6 +12,8 @@ const alter = <T>(arr: T[]) => ({
   byInsertingBetweenEachItem: (value: any) => intersperse(value, arr),
   byMovingItemAtIndex: (fromIndex: number) => ({
     toIndex: (toIndex: number) => move(fromIndex, toIndex, arr),
+    toTheStart: () => move(fromIndex, 0, arr),
+    toTheEnd: () => move(fromIndex, arr.length - 1, arr),
   }),
   byRemovingItemsBetweenIndex: (fromIndex: number) => ({
     andIndex: (toIndex: number) => remove(fromIndex, toIndex, arr),

@@ -136,7 +136,7 @@ Vocabulary is reused across categories to reduce the learning curve.
        <summary><code>toIndex</code></summary>
        <p>
        <br/>          
-       Return a new array with the item at the index specified moved to the chosen index.
+       Create a new array with the item at the index specified moved to the chosen index.
    
        ```javascript
        const input = ["a", "b", "c", "d", "e", "f"];
@@ -144,6 +144,40 @@ Vocabulary is reused across categories to reduce the learning curve.
        const result = alter(input).byMovingItemAtIndex(0).toIndex(2);
    
        expect(result).toEqual(["b", "c", "a", "d", "e", "f"]);
+       ```
+       
+       </p>
+       </details>
+       
+     - <details>
+       <summary><code>toTheStart</code></summary>
+       <p>
+       <br/>          
+       Create a new array with the item at the index specified moved to the start of the array.
+   
+       ```javascript
+       const input = ["a", "b", "c", "d", "e", "f"];
+       
+       const result = alter(input).byMovingItemAtIndex(2).toTheStart();
+
+       expect(result).toEqual(["c", "a", "b", "d", "e", "f"]);
+       ```
+       
+       </p>
+       </details>
+       
+     - <details>
+       <summary><code>toTheEnd</code></summary>
+       <p>
+       <br/>          
+       Create a new array with the item at the index specified moved to the end of the array.
+   
+       ```javascript
+        const input = ["a", "b", "c", "d", "e", "f"];
+
+        const result = alter(input).byMovingItemAtIndex(2).toTheEnd();
+
+        expect(result).toEqual(["a", "b", "d", "e", "f", "c"]);
        ```
        
        </p>

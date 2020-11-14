@@ -38,6 +38,28 @@ describe("alter", () => {
         expect(input).not.toEqual(result);
       });
     });
+
+    describe("toTheStart", () => {
+      it("should return a new array with the item at the index specified moved to the start of the array", () => {
+        const input = ["a", "b", "c", "d", "e", "f"];
+
+        const result = alter(input).byMovingItemAtIndex(2).toTheStart();
+
+        expect(result).toEqual(["c", "a", "b", "d", "e", "f"]);
+        expect(input).not.toEqual(result);
+      });
+    });
+
+    describe("toTheEnd", () => {
+      it("should return a new array with the item at the index specified moved to the end of the array", () => {
+        const input = ["a", "b", "c", "d", "e", "f"];
+
+        const result = alter(input).byMovingItemAtIndex(2).toTheEnd();
+
+        expect(result).toEqual(["a", "b", "d", "e", "f", "c"]);
+        expect(input).not.toEqual(result);
+      });
+    });
   });
 
   describe("byRemovingItemsBetweenIndex", () => {
