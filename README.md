@@ -47,9 +47,14 @@ yarn add crystalline
 ```
 
 # Usage
-Import specific ES modules to reduce the size of your bundle:
+Import specific modules to reduce the size of your bundle:
+
 ```javascript
+// ECMAScript modules
 import { sort } from 'crystalline/arrays/sort';
+
+// CommonJS
+const { sort } = require('crystalline/arrays/sort');  
 
 sort(...);
 ```
@@ -57,7 +62,11 @@ sort(...);
 Alternatively you can import the whole library:
 
 ```javascript
+// ECMAScript modules
 import crystalline from 'crystalline';
+
+// CommonJS
+const crystalline = require('crystalline').default;
 
 crystalline.arrays.sort(...);
 ```
