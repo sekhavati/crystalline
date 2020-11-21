@@ -571,6 +571,25 @@ Vocabulary is reused across categories to reduce the learning curve.
      
     </p>
     </details>
+    
+    <details>
+    <summary><code>dropConsecutiveRepeatsSatisfying</code></summary>
+    <p>           
+    <br/>          
+    Create a new array containing every item from the input array with any consecutive elements satisfying the predicate removed.
+                
+    ```javascript
+    const input = [1, -1, 1, 3, 4, -4, -4, -5, 5, 3, 3];
+
+    const result = from(input).dropConsecutiveRepeatsSatisfying(
+      (x, y) => Math.abs(x) === Math.abs(y)
+    );
+
+    expect(result).toEqual([1, 3, 4, -5, 3]);
+    ```
+     
+    </p>
+    </details>
 
 - <strong>`sort`</strong>
     <details>

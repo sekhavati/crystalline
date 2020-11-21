@@ -191,4 +191,17 @@ describe("from", () => {
       expect(input !== result).toBe(true);
     });
   });
+
+  describe("dropConsecutiveRepeatsSatisfying", () => {
+    it("should return a new array containing every item from the input array with any consecutive elements satisfying the predicate removed", () => {
+      const input = [1, -1, 1, 3, 4, -4, -4, -5, 5, 3, 3];
+
+      const result = from(input).dropConsecutiveRepeatsSatisfying(
+        (x, y) => Math.abs(x) === Math.abs(y)
+      );
+
+      expect(result).toEqual([1, 3, 4, -5, 3]);
+      expect(input !== result).toBe(true);
+    });
+  });
 });

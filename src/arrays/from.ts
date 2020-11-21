@@ -7,6 +7,7 @@ import drop from "ramda/src/drop";
 import dropLast from "ramda/src/dropLast";
 import dropLastWhile from "ramda/src/dropLastWhile";
 import dropRepeats from "ramda/src/dropRepeats";
+import dropRepeatsWith from "ramda/src/dropRepeatsWith";
 import last from "ramda/src/last";
 
 // @ts-ignore
@@ -34,6 +35,8 @@ const from = <T>(arr: T[]) => ({
     fromTheEnd: () => dropLastWhile(predicate, arr),
   }),
   dropConsecutiveRepeats: () => dropRepeats(arr),
+  dropConsecutiveRepeatsSatisfying: (predicate: (a: T, b: T) => boolean) =>
+    dropRepeatsWith(predicate, arr),
 });
 
 export { from };
