@@ -267,6 +267,24 @@ Vocabulary is reused across categories to reduce the learning curve.
     </p>
     </details>
 
+- <strong>`check`</strong>
+    <details>
+    <summary><code>endsWith</code></summary>
+    <p>
+    <br/>          
+    Checks if an array ends with the items provided.
+
+    ```javascript
+    const input = ["a", "b", "c"];
+
+    expect(check(input).endsWith("c")).toBe(true);
+    expect(check(input).endsWith("b", "c")).toBe(true);
+    expect(check(input).endsWith(...["b", "c"])).toBe(true);
+    ```
+
+    </p>
+    </details>
+
 - <strong>`findItemsIn`</strong>
     <details>
     <summary><code>containedIn</code></summary>
