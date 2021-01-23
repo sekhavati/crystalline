@@ -268,7 +268,7 @@ Vocabulary is reused across categories to reduce the learning curve.
     </details>
 
     <details>
-    <summary><code>byRemovingFalseyItems</code></summary>
+    <summary><code>byRemovingFalsyItems</code></summary>
     <p>
     <br/>          
     Create a new array with all falsy items removed.
