@@ -22,6 +22,7 @@ const alter = <T>(arr: T[]) => ({
   byRemovingDuplicates: () => uniq(arr),
   byRemovingItemsEqualTo: (...itemsToRemove: T[]) =>
     without(itemsToRemove, arr),
+  byRemovingFalsyItems: () => arr.filter((i: T) => i),
 });
 
 export { alter };

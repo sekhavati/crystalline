@@ -116,4 +116,30 @@ describe("alter", () => {
       expect(result).toEqual([3, 4]);
     });
   });
+
+  describe("byRemovingFalsyItems", () => {
+    it("should return a new array with all falsy items removed", () => {
+      const input = [
+        "a",
+        false,
+        "b",
+        null,
+        "c",
+        undefined,
+        "d",
+        0,
+        "e",
+        -0,
+        "f",
+        NaN,
+        "g",
+        "",
+      ];
+
+      const result = alter(input).byRemovingFalsyItems();
+
+      expect(input).not.toEqual(result);
+      expect(result).toEqual(["a", "b", "c", "d", "e", "f", "g"]);
+    });
+  });
 });

@@ -267,6 +267,38 @@ Vocabulary is reused across categories to reduce the learning curve.
     </p>
     </details>
 
+    <details>
+    <summary><code>byRemovingFalseyItems</code></summary>
+    <p>
+    <br/>          
+    Create a new array with all falsy items removed.
+
+    ```javascript
+    const input = [
+      "a",
+      false,
+      "b",
+      null,
+      "c",
+      undefined,
+      "d",
+      0,
+      "e",
+      -0,
+      "f",
+      NaN,
+      "g",
+      "",
+    ];
+
+    const result = alter(input).byRemovingFalsyItems();
+
+    expect(result).toEqual(["a", "b", "c", "d", "e", "f", "g"]);
+    ```
+
+    </p>
+    </details>
+
 - <strong>`findItemsIn`</strong>
     <details>
     <summary><code>containedIn</code></summary>
